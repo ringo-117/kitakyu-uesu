@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://mew2025.com/sitemap.xml
