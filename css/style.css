@@ -658,7 +658,8 @@ html {
     　　TB_ヒーロー
   ==============================================================*/
   .sec-hero .title {
-    font-size: 40px;
+    /* font-size: 40px; */
+    font-size: 80px;
   }
 
   .sec {
@@ -914,13 +915,18 @@ html {
 
 
 
-
-
 }
 
 
 @media screen and (min-width: 1024px) {
   /* パソコン用レイアウト 1024px以上の範囲に収めるデザインはこの中に記述 */
+
+
+
+}
+
+@media screen and (min-width: 1400px) {
+  /* パソコン用レイアウト 1400px以上の範囲に収めるデザインはこの中に記述 */
 
   .pc-nav {
     display: block;
@@ -933,7 +939,7 @@ html {
   /*==============================================================
     　　PC_ヘッダー
   ==============================================================*/
-  .header .nav-list {
+  /* .header .nav-list {
     display: flex;
     padding: 0;
   }
@@ -954,6 +960,9 @@ html {
 
   .header .nav-item {
     padding-left: 32px;
-  }
+  } */
+
+
+
 
 }
