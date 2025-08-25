@@ -31,15 +31,7 @@ const swiper = new Swiper(".swiper", {
     },
     // 1024px以上（PC）
     1024: {
-      // slidesPerView: 2.3,
-      slidesPerView: 1.8,
-      spaceBetween: 35,
-      // centeredSlides: false // ← 見切れをなくす
-    },
-    // 1450px以上（PC）
-    1400: {
-      slidesPerView: 1.8,
-      spaceBetween: 35,
+      enabled: false,
     }
   }
 });

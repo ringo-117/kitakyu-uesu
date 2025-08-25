@@ -683,7 +683,8 @@ html {
     letter-spacing: .068em;
     white-space: nowrap;
     font-weight: bold;
-    margin: 80px 0 28px;
+    /* margin: 80px 0 28px; */
+    margin: 80px 0 30px;
   }
 
   .sec-text {
@@ -807,8 +808,8 @@ html {
   }
 
   .company-info .info-item {
-    grid-template-columns: 240px 1fr;
-    font-size: 30px;
+    grid-template-columns: 190px 1fr;
+    font-size: 23px;
     line-height: 1.7;
     padding: 35px 25px;
   }
@@ -829,6 +830,10 @@ html {
     margin: 80px 0 50px;
   }
 
+  .sec-company .sec-text {
+    font-size: 23px;
+  }
+
   /*==============================================================
     　　TB_よくある質問 faq
   ==============================================================*/
@@ -837,13 +842,14 @@ html {
   }
 
   .faq-title {
-    padding: 35px 40px 25px 0;
-    font-size: 30px;
+    /* padding: 35px 40px 25px 0; */
+    padding: 35px 40px 25px 8px;
+    font-size: 23px;
   }
 
   .faq-title::after {
-    width: 45px;
-    height: 45px;
+    width: 40px;
+    height: 40px;
   }
 
   .faq-box .title-text {
@@ -851,12 +857,13 @@ html {
   }
 
   .faq-box p span {
-    font-size: 30px;
+    font-size: 23px;
   }
 
   .faq-content .faq-A {
-    font-size: 28px;
-    padding: 0 60px 50px 0;
+    font-size: 22px;
+    /* padding: 0 60px 50px 0; */
+    padding: 0 60px 50px 8px;
     line-height: 1.9;
   }
 
@@ -866,6 +873,7 @@ html {
   .sec-instagram h2.title {
     font-size: 60px;
     letter-spacing: .03em;
+    margin-top: 60px;
     margin-bottom: 30px;
   }
 
@@ -914,6 +922,10 @@ html {
     font-size: 18px;
     font-weight: 500;
     margin: 74px 0 44px;
+  }
+
+  .foot-link a {
+    margin-right: 12px;
   }
 
   .footer .copy {
@@ -983,12 +995,13 @@ html {
   .swiper-wrapper {
     display: grid !important;   /* flex を grid に上書き */
     grid-template-columns: repeat(2, 1fr); /* 2列 */
-    gap: 10px; /* カード間の余白 */
-    row-gap: 20px;
+    gap: 16px; /* カード間の余白 */
+    transform: none !important;
+    margin-left: 0 !important;
   }
   .swiper-slide {
     width: auto !important; /* Swiperの幅指定を無効化 */
-    margin: 0;
+    margin: 0 !important;
   }
 
   element.style {
@@ -1003,13 +1016,42 @@ html {
   /*==============================================================
     　　PC_会社情報 company
   ==============================================================*/
-  .president-img {
+  /* .president-img {
     aspect-ratio: 1.5;
+  } */
+
+  .company-info .info-item {
+    grid-template-columns: 240px 1fr;
+    font-size: 30px;
+  }
+
+  .map p {
+    font-size: 33px;
+  }
+
+  .sec-company .sec-text {
+    font-size: 30px;
   }
 
   /*==============================================================
     　　PC_よくある質問 faq
   ==============================================================*/
+  .faq-title {
+    font-size: 30px;
+  }
+
+  .faq-title::after {
+    width: 45px;
+    height: 45px;
+  }
+
+  .faq-box p span {
+    font-size: 30px;
+  }
+
+  .faq-content .faq-A {
+    font-size: 28px;
+  }
 
   /*==============================================================
     　　PC_インスタ instagram
