@@ -12,10 +12,10 @@ const swiper = new Swiper(".swiper", {
   // pagination: {
   //   el: ".swiper-pagination",
   // },
-  // navigation: {
-  //   nextEl: ".swiper-button-next",
-  //   prevEl: ".swiper-button-prev",
-  // },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
 
   // 画面幅によって設定を変える
   breakpoints: {
@@ -28,6 +28,8 @@ const swiper = new Swiper(".swiper", {
     640: {
       slidesPerView: 1.6,
       spaceBetween: 25,
+      // centeredSlides: false,
+
     },
     // 1024px以上（PC）
     1024: {

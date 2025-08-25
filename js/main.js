@@ -34,3 +34,47 @@
 }
 
 
+// モーダル
+document.addEventListener('DOMContentLoaded', () => {
+  const modalBg = document.querySelector('.modal-bg');
+  const modals = document.querySelectorAll('.modal-container');
+  // const modalClose = document.querySelector('.modal-close');
+
+  // 開く処理
+  document.querySelectorAll('.modal-open').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const targetId = btn.dataset.target;
+      const targetModal = document.getElementById(targetId);
+      if (targetModal) {
+        targetModal.classList.add('active');
+        modalBg.classList.add('active');
+        // modalClose.classList.add('active');
+        document.body.style.overflow = 'hidden'; // ← スクロール禁止
+      }
+    });
+  });
+
+  // 閉じる処理（背景クリック）
+  modalBg.addEventListener('click', () => {
+    closeModal();
+  });
+  // modalClose.addEventListener('click', () => {
+  //   closeModal();
+  // });
+
+  // 閉じる処理（ボタン）
+  document.querySelectorAll('.modal-close').forEach(btn => {
+    btn.addEventListener('click', () => {
+      closeModal();
+    });
+  });
+
+  // 共通の閉じる関数
+  function closeModal() {
+    modals.forEach(m => m.classList.remove('active'));
+    modalBg.classList.remove('active');
+    document.body.style.overflow = ''; // ← スクロール再開
+  }
+});
+
+

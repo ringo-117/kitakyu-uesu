@@ -32,7 +32,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <!-- css -->
     <link rel="stylesheet" href="css/destyle.css">
-    <link rel="stylesheet" href="css/style.css?v=1.6">
+    <link rel="stylesheet" href="css/style.css?v=1.7">
   </head>
 
   <body>
@@ -71,13 +71,13 @@
               <a href="tel:0932460988">
                 <div class="btn-style contact">
                   <p>お問い合わせ</p>
-                  <span class="btn-arrow"><img src="img/arrow_white.png" alt="白矢印"></span>
+                  <span class="btn-arrow"><img src="img/arrow_white.webp" alt="白矢印"></span>
                 </div>
               </a>
               <a href="https://maps.app.goo.gl/x28CqC33tuiNRzJV9" target="_blank" rel="noopener noreferrer">
                 <div class="btn-style map">
                   <p>Google Map</p>
-                  <span class="btn-arrow"><img src="img/arrow_green.png" alt="緑矢印"></span>
+                  <span class="btn-arrow"><img src="img/arrow_green.webp" alt="緑矢印"></span>
                 </div>
               </a>
             </li>
@@ -125,9 +125,27 @@
           福岡県中間市の 北九ウエス では、ウエスや軍手などの製造・販売をはじめ、<span class="underline">ご家庭で不要になった衣類や布団の<span class="color">無料引き取り</span>を行っています。</span><br>
           仕入れから加工・販売まで一貫して自社で対応できる体制を整え、廃棄物となる衣類に新たな価値を生み出すことで、<span class="color">環境負荷の軽減</span>に取り組んでいます。また、国内販売だけでなく海外への輸出にも力を入れ、「リサイクルを通じた<span class="color">循環型社会の実現</span>」に取り組んでいます。
         </p>
-        <figure class="cycle-img">
-          <img src="img/cycle.png" alt="流れ">
-        </figure>
+        <article class="cycle-img">
+          <div class="cycle-container">
+            <!-- <img src="img/cycle.png" alt="流れ"> -->
+            <figure class="cycle-item">
+              <img src="img/atsumeru.webp" alt="集める">
+              <p>集める</p>
+            </figure>
+            <figure class="cycle-item">
+              <img src="img/saisei.webp" alt="再生する">
+              <p>再生する</p>
+            </figure>
+            <figure class="cycle-item">
+              <img src="img/yakunitatsu.webp" alt="役に立つ">
+              <p>役に立つ</p>
+            </figure>
+            <figure class="cycle-item">
+              <img src="img/mamoru.webp" alt="守る">
+              <p>守る</p>
+            </figure>
+          </div>
+        </article>
 
         <div class="btn-style">
           <a href="index.html#environment">
@@ -237,6 +255,36 @@
             <p>受け入れ可能なもの</p>
           </button>
         </div>
+
+        <!-- 01-モーダル内容 -->
+        <div id="modal-01" class="modal-container">
+          <span class="modal-close close-icon">×</span>
+          <div class="modal-content">
+            <p class="title">受け入れ可能なものと<br>受け入れできないもの。</p>
+            <div class="modal-item">
+              <p>注意事項</p>
+              <P>受け入れ可能な品目であっても、<span class="color">以下のような状態</span>のものはお受けできません。</P>
+              <ul>
+                <li>濡れているもの</li>
+                <li>ひどく汚れているもの</li>
+                <li>ペットなどの動物臭があるもの</li>
+                <li>ボロボロになったもの</li>
+              </ul>
+            </div>
+
+            <div class="modal-item">
+              <p>受け入れ可能なもの</p>
+              <div></div>
+            </div>
+
+            <div class="modal-item">
+              <p>受け入れできないもの</p>
+              <div></div>
+            </div>
+
+          </div>
+        </div>
+        <div class="modal-bg"></div>
       </section>
 
       <!-- 環境への取り組み -->
@@ -296,6 +344,12 @@
                 <p class="text">タオルなどの生地</p>
               </div>
             </div>
+          </div>
+          <div class="swiper-button-next pc-none">
+            <img src="img/slide-arrow.webp" alt="矢印">
+          </div>
+          <div class="swiper-button-prev pc-none">
+            <img src="img/slide-arrow.webp" alt="矢印">
           </div>
         </article>
       </section>
