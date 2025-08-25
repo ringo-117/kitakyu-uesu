@@ -1060,11 +1060,16 @@ html {
     grid-template-rows: 341px 341px 341px;
   }
 
+  .sec-instagram .btn-style {
+    margin-top: 80px;
+  }
+
   /*==============================================================
     　　PC_フッター
   ==============================================================*/
   .footer {
     margin-top: 90px;
+    margin-top: 200px;
     padding: 70px 60px;
     letter-spacing: .05em;
     font-weight: 500;
