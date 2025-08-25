@@ -165,7 +165,6 @@ html {
     font-family: 'Roboto';
     font-size: 27px;
     letter-spacing: 0.05em;
-
   }
 
   /*==============================================================
@@ -857,7 +856,7 @@ html {
 
   .faq-content .faq-A {
     font-size: 28px;
-    padding: 0 60px 40px 0;
+    padding: 0 60px 50px 0;
     line-height: 1.9;
   }
 
@@ -929,11 +928,104 @@ html {
 @media screen and (min-width: 1024px) {
   /* パソコン用レイアウト 1024px以上の範囲に収めるデザインはこの中に記述 */
   /*==============================================================
+    　　PC_ヘッダー
+  ==============================================================*/
+  
+
+  /*==============================================================
     　　PC_ヒーロー
   ==============================================================*/
+  .sec-hero {
+    margin-top: 230px;
+    position: relative;
+    padding: 0 60px;
+  }
+
   .sec-hero .title {
-    /* font-size: 40px; */
-    font-size: 10vw;
+    font-size: 9.3vw;
+  }
+
+  .sec {
+    padding: 0 60px;
+    scroll-margin-top: 140px;
+
+    /* max-width: 1226px; */
+    max-width: 1300px;
+    /* padding: 0 25px; */
+    margin: 0 auto;
+  }
+
+  .hero-slide {
+    margin-top: 40px;
+    aspect-ratio: 1.5;
+  }
+
+  /*==============================================================
+    　　PC_北九ウエスとは about
+  ==============================================================*/
+  .sec h2.title {
+    font-size: calc((77 / 1176) * (100vw - 50px));
+    line-height: 2.1;
+    letter-spacing: .068em;
+    white-space: nowrap;
+    font-weight: bold;
+    margin: 80px 0 28px;
+  }
+
+  /*==============================================================
+    　　PC_環境への取り組み environment
+  ==============================================================*/
+  .sec-environment .text-box {
+    padding: 0;
+  }
+
+  /* ==================== スライダー ================== */
+  .swiper-wrapper {
+    display: grid !important;   /* flex を grid に上書き */
+    grid-template-columns: repeat(2, 1fr); /* 2列 */
+    gap: 10px; /* カード間の余白 */
+    row-gap: 20px;
+  }
+  .swiper-slide {
+    width: auto !important; /* Swiperの幅指定を無効化 */
+    margin: 0;
+  }
+
+  element.style {
+    margin-right: 0px;
+  }
+
+  .swiper-slide .text-box {
+    bottom: 36px;
+    padding-left: 36px;
+  }
+
+  /*==============================================================
+    　　PC_会社情報 company
+  ==============================================================*/
+  .president-img {
+    aspect-ratio: 1.5;
+  }
+
+  /*==============================================================
+    　　PC_よくある質問 faq
+  ==============================================================*/
+
+  /*==============================================================
+    　　PC_インスタ instagram
+  ==============================================================*/
+  .link-box {
+    grid-template-rows: 341px 341px 341px;
+  }
+
+  /*==============================================================
+    　　PC_フッター
+  ==============================================================*/
+  .footer {
+    margin-top: 90px;
+    padding: 70px 60px;
+    letter-spacing: .05em;
+    font-weight: 500;
   }
 
 
@@ -952,30 +1044,80 @@ html {
   }
 
   /*==============================================================
-    　　PC_ヘッダー
+    　　PC-big_ヘッダー
   ==============================================================*/
+  .header {
+    padding: 60px 60px;
+  }
+
   .header .nav-list {
     display: flex;
     padding: 0;
   }
 
   .header .nav-item {
-    font-size: 16px;
+    font-size: 14px;
     letter-spacing: 0.17em;
     padding: 0;
     margin: 0;
-    padding-left: 20px;
+    padding-left: 32px;
     font-weight: bold;
   }
 
   .logo-box img {
-    height: 44px;
-    margin-right: 20px;
+    height: 50px;
+    margin-right: 16px;
   }
 
-  .header .nav-item {
-    padding-left: 32px;
+  .header .nav-item.sns {
+    font-size: 17px;
+    letter-spacing: 0.08em;
+    margin-top: -2px;
   }
+
+  /*==============================================================
+    　　PC-big_ヒーロー
+  ==============================================================*/
+
+  .sec-hero {
+    /* max-width: 1300px;
+    margin: 0 auto; */
+    margin-top: 230px;
+  }
+
+  .sec-hero .title {
+    /* font-size: 117px; */
+    font-size: 9.5vw;
+  }
+
+  /*==============================================================
+    　　PC-big北九ウエスとは about
+  ==============================================================*/
+  .sec h2.title {
+    margin: 150px 0 8px;
+  }
+
+  /*==============================================================
+    　　PC-big_北九ウエスとは about
+  ==============================================================*/
+  .sec h2.title {
+    font-size: 77px;
+  }
+
+  /*==============================================================
+    　　PC-big_インスタ instagram
+  ==============================================================*/
+  .link-box {
+    grid-template-rows: 381px 381px 381px;
+  }
+
+  /*==============================================================
+    　　PC-big_フッター
+  ==============================================================*/
+  /* .foot-con {
+    max-width: 1180px;
+    margin: 0 auto;
+  } */
 
 
 
