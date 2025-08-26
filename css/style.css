@@ -437,10 +437,52 @@ html {
     pointer-events: auto;
   }
 
+  /* モーダル本体 */
+  .modal-container {
+    width: 100%;
+    /* max-width: 90%; */
+    height: 100%;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 999;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s;
+    /* max-height: 80vh; */
+    /* overflow-y: auto; */
+    letter-spacing: 0.03em;
+
+    overflow-y: auto;
+    padding-top: 20px;
+  }
+
+  .modal-container .modal-scroll {
+    /* margin-top: 46px; */
+    /* margin-top: 20px; */
+    padding: 0 20px 76px;
+    background-color: #ffffff;
+    border-radius: 20px 20px 0 0;
+  }
+
+  .modal-container.active {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
   .modal-close {
-    position: absolute;
-    top: 13px; /* モーダルの外に出す */
-    right: 13px;
+    position: sticky;   /* ← スクロールしたら止まる */
+    top: 16px;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .modal-close .close-icon {
+    /* position: absolute;
+    top: 13px;
+    right: 13px; */
     /* background-color: #ee5852; */
     background-color: #333336;
     border: solid 1px #333336;
@@ -449,41 +491,17 @@ html {
     border-radius: 50%;
     color: #fff;
     font-size: 20px;
-    font-weight: 500;
+    font-weight: 900;
     text-align: center;
     padding-bottom: 0;
-    padding-left: 0.3px;
-  }
-
-  /* モーダル本体 */
-  .modal-container {
-    width: 100%;
-    /* max-width: 90%; */
-    position: fixed;
-    top: 20px;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #F6F7F8;
-    padding: 76px 20px;
-    z-index: 999;
-    opacity: 0;
-    pointer-events: none;
-    transition: 0.3s;
-    /* max-height: 80vh; */
-    /* overflow-y: auto; */
-    border-radius: 20px 20px 0 0;
-    letter-spacing: 0.03em;
-    margin-top: 20px;
-  }
-
-  .modal-container.active {
-    opacity: 1;
-    pointer-events: auto;
+    padding-left: 0.8px;
+    align-items: center;
   }
 
   .modal-content {
     overflow-y: auto;
+    flex: 1;
+    overflow-y: auto; /* ← ここでスクロール */
   }
 
   /*＝＝＝＝＝＝＝＝＝＝ モーダルの内容 ＝＝＝＝＝＝＝＝＝＝*/
@@ -491,19 +509,48 @@ html {
     font-size: 26px;
     font-weight: 700;
     margin-bottom: 48px;
+    margin-top: 46px;
   }
 
   .modal-content .modal-item {
     background-color: #f5f5f7;
     margin-bottom: 20px;
     padding: 64px 24px ;
+    font-size: 20px;
+    font-weight: 700;
+    border-radius: 30px;
   }
 
-  .modal-content .text {
+  .modal-content .modal-item p {
+    margin-bottom: 12px;
+    line-height: 1.5;
+  }
+
+
+  .modal-content .modal-item ul {
+    margin-left: 20px;
     font-size: 14px;
-    font-weight: 500;
-    line-height: 1.8;
-    letter-spacing: 0.05em;
+    margin-top: 24px;
+  }
+
+  .modal-content .modal-item ul li {
+    list-style: disc;
+    margin-top: 8px;
+  }
+
+  .modal-content .modal-item .item {
+    width: 125px;
+    height: 125px;
+    box-shadow: none;
+    border-radius: 50%;
+    background-color: #D9D9D9;
+  }
+
+  .modal-content .modal-item .item-box {
+    display: grid;
+    grid-template-columns: 125px 125px;
+    justify-content: space-between;
+    margin-top: 54px;
   }
 
   /*==============================================================
@@ -1034,6 +1081,59 @@ html {
     margin: 30px 0 60px;
   }
 
+  /* モーダル本体 */
+  .modal-container {
+    padding: 40px 44px;
+  }
+
+  .modal-container .modal-scroll {
+    border-radius: 20px;
+    padding: 76px;
+  }
+
+  /*＝＝＝＝＝＝＝＝＝＝ モーダルの内容 ＝＝＝＝＝＝＝＝＝＝*/
+  .modal-content .title {
+    font-size: 40px;
+    margin-bottom: 64px;
+    margin-top: 0;
+    line-height: 1.6;
+  }
+
+  .modal-content .modal-item {
+    padding: 64px 40px;
+  }
+
+  .modal-content .modal-item p {
+    font-size: 24px;
+    line-height: 1.8;
+    margin-bottom: 18px;
+  }
+
+  .modal-content .modal-item ul {
+    margin-left: 20px;
+    font-size: 18px;
+    margin-top: 32px;
+  }
+
+  .modal-content .modal-item ul li {
+    list-style: disc;
+    margin-top: 18px;
+  }
+
+  .modal-content .modal-item .item {
+    width: 140px;
+    height: 140px;
+    box-shadow: none;
+    border-radius: 50%;
+    background-color: #D9D9D9;
+  }
+
+  .modal-content .modal-item .item-box {
+    grid-template-columns: 140px 140px 140px;
+    margin-top: 64px;
+  }
+
+
   /*==============================================================
     　　TB_環境への取り組み environment
   ==============================================================*/
@@ -1268,6 +1368,74 @@ html {
   }
 
   /*==============================================================
+    　　PC_受け入れについて acceptance
+  ==============================================================*/
+  /* モーダル本体 */
+  .modal-container {
+    padding: 40px 73px;
+    max-width: 1340px;
+    margin: 0 auto;
+  }
+
+  .modal-container .modal-scroll {
+    padding: 60px 76px 76px;
+  }
+
+  .modal-close .close-icon {
+    width: 36px;
+    height: 36px;
+    padding-top: 2px;
+  }
+
+  /*＝＝＝＝＝＝＝＝＝＝ モーダルの内容 ＝＝＝＝＝＝＝＝＝＝*/
+  .modal-content .title {
+    font-size: 48px;
+    margin-bottom: 100px;
+
+  }
+
+  .modal-content .modal-item {
+    padding: 64px 56px;
+  }
+
+  .modal-content .modal-item p {
+    font-size: 31px;
+  }
+
+  .modal-content .modal-item .item {
+    width: 100%;
+    height: auto;
+    box-shadow: none;
+    border-radius: 50%;
+    background-color: #D9D9D9;
+    aspect-ratio: 1 / 1;
+    margin-bottom: 21%;
+  }
+
+  .modal-content .modal-item ul {
+    margin-left: 32px;
+    font-size: 22px;
+    margin-top: 50px;
+  }
+
+  .modal-content .modal-item ul li {
+    margin-top: 24px;
+  }
+
+  .modal-content .modal-item .min-title {
+    font-size: 32px;
+    margin-bottom: 28px;
+  }
+
+  .modal-content .modal-item .item-box {
+    /* grid-template-columns: 235px 235px 235px 235px; */
+    grid-template-columns: 21% 21% 21% 21%;
+    margin-top: 64px;
+  }
+
+
+
+  /*==============================================================
     　　PC_環境への取り組み environment
   ==============================================================*/
   .sec-environment .text-box {
@@ -1383,6 +1551,7 @@ html {
   .header .nav-list {
     display: flex;
     padding: 0;
+    position: relative;
   }
 
   .header .nav-item {
