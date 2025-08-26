@@ -326,7 +326,8 @@ html {
     max-width: 600px; /* PC ならもっと広げてもOK */
     aspect-ratio: 1 / 1; /* スマホでは正円 */
     margin: auto;
-    border: 2px dashed #2f8f2f; /* 点線の円 */
+    /* border: 2px dashed #2f8f2f; */
+    border: 3px dotted #2f8f2f; /* 点線の円 */
     border-radius: 50%; /* 円にする */
     /* box-sizing: border-box; */
 
@@ -1027,6 +1028,27 @@ html {
     font-size: 28px;
   }
 
+  /* ==================== 画像 ================== */
+  .cycle-container {
+    max-width: 600px; /* PC ならもっと広げてもOK */
+    aspect-ratio: 1.5 / 1; /* スマホでは正円 */
+    border: 7px dotted #2f8f2f;
+  }
+
+  .cycle-item {
+    width: 180px;
+    height: 180px;
+    border: solid 3px #379E49;
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  .cycle-item img {
+    width: auto;
+    height: 85px;
+    margin: 2px 0 10px;
+  }
+
   /*==============================================================
     　　TB_受け入れについて acceptance
   ==============================================================*/
@@ -1364,7 +1386,32 @@ html {
     letter-spacing: .068em;
     white-space: nowrap;
     font-weight: bold;
-    margin: 80px 0 28px;
+    margin: 85px 0 28px;
+  }
+
+  /* ==================== 画像 ================== */
+  .cycle-container {
+    max-width: 840px; /* PC ならもっと広げてもOK */
+    aspect-ratio: 1.9 / 1; /* スマホでは正円 */
+    border: 10px dotted #2f8f2f;
+  }
+
+  .cycle-item {
+    width: 230px;
+    height: 230px;
+    border: solid 4px #379E49;
+    font-size: 24px;
+  }
+
+  .cycle-item img {
+    width: auto;
+    height: 105px;
+    margin: 2px 0 16px;
+  }
+
+  .cycle-img {
+    margin-top: 100px;
+    margin-bottom: 90px;
   }
 
   /*==============================================================
@@ -1385,6 +1432,10 @@ html {
     width: 36px;
     height: 36px;
     padding-top: 2px;
+  }
+
+  .sec-acceptance .note-box {
+    margin: 30px 0 70px;
   }
 
   /*＝＝＝＝＝＝＝＝＝＝ モーダルの内容 ＝＝＝＝＝＝＝＝＝＝*/
@@ -1433,6 +1484,8 @@ html {
     margin-top: 64px;
   }
 
+  
+
 
 
   /*==============================================================
@@ -1467,9 +1520,9 @@ html {
   /*==============================================================
     　　PC_会社情報 company
   ==============================================================*/
-  /* .president-img {
-    aspect-ratio: 1.5;
-  } */
+  .company-info .info-item {
+    margin-top: 40px;
+  }
 
   .company-info .info-item {
     grid-template-columns: 240px 1fr;
@@ -1487,6 +1540,10 @@ html {
   /*==============================================================
     　　PC_よくある質問 faq
   ==============================================================*/
+  .sec-faq .accordion {
+    margin-top: 40px;
+  }
+
   .faq-title {
     font-size: 30px;
   }
@@ -1596,6 +1653,30 @@ html {
     margin: 150px 0 8px;
   }
 
+  /* ==================== 画像 ================== */
+  .cycle-container {
+    max-width: 930px; /* PC ならもっと広げてもOK */
+    aspect-ratio: 1.9 / 1; /* スマホでは正円 */
+    border: 10px dotted #2f8f2f;
+  }
+
+  .cycle-item {
+    width: 250px;
+    height: 250px;
+    border: solid 4px #379E49;
+    font-size: 26px;
+  }
+
+  .cycle-item img {
+    height: 115px;
+    margin: 2px 0 16px;
+  }
+
+  .cycle-img {
+    margin-top: 135px;
+    margin-bottom: 100px;
+  }
+
   /*==============================================================
     　　PC-big_北九ウエスとは about
   ==============================================================*/
@@ -1604,10 +1685,29 @@ html {
   }
 
   /*==============================================================
+    　　PC-big_受け入れについて acceptance
+  ==============================================================*/
+  .sec-acceptance .note-box {
+    margin: 30px 0 100px;
+  }
+
+  /*==============================================================
+    　　PC-big_よくある質問 faq
+  ==============================================================*/
+  .sec-faq .accordion {
+    margin-top: 70px;
+  }
+
+  /*==============================================================
     　　PC-big_インスタ instagram
   ==============================================================*/
   .link-box {
     grid-template-rows: 381px 381px 381px;
+    margin-top: 50px;
+  }
+
+  .sec-instagram .btn-style {
+    margin-top: 80px;
   }
 
   /*==============================================================
