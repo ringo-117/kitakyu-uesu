@@ -457,7 +457,7 @@ html {
     letter-spacing: 0.03em;
 
     overflow-y: auto;
-    padding-top: 20px;
+    /* padding-top: 20px; */
   }
 
   .modal-container .modal-scroll {
@@ -466,6 +466,7 @@ html {
     padding: 0 20px 76px;
     background-color: #ffffff;
     border-radius: 20px 20px 0 0;
+    margin-top: 20px;
   }
 
   .modal-container.active {
@@ -474,29 +475,68 @@ html {
   }
 
   .modal-close {
+    cursor: auto;
+    position: var(--modal-close-button-position);
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
+    order: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-item-align: end;
+    align-self: flex-end;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    z-index: 9999;
+    height: var(--modal-close-button-size);
+    width: var(--modal-close-button-size);
+    margin: 0;
+    padding: 0;
+    border: 0;
+    -webkit-margin-end: var(--modal-close-button-offset-inline-start);
+    margin-inline-end: var(--modal-close-button-offset-inline-start);
+    margin-top: var(--modal-close-button-offset-top);
+    top: var(--modal-close-button-offset-top);
+
     position: sticky;   /* ← スクロールしたら止まる */
     top: 16px;
     display: flex;
     justify-content: flex-end;
+
+    position: -webkit-sticky;
+    position:         sticky;
+    top: 0;
+    padding-top: 16px;
   }
 
   .modal-close .close-icon {
-    /* position: absolute;
-    top: 13px;
-    right: 13px; */
-    /* background-color: #ee5852; */
     background-color: #333336;
     border: solid 1px #333336;
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    color: #fff;
-    font-size: 20px;
-    font-weight: 900;
-    text-align: center;
+    align-content: center;
+  }
+
+  .modal-close .close-icon img {
+    /* position: absolute;
+    top: 13px;
+    right: 13px; */
+    /* background-color: #ee5852; */
+    width: 15px;
+    height: 15px;
+    /* position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
     padding-bottom: 0;
-    padding-left: 0.8px;
-    align-items: center;
+    display: grid;
+    place-content: center;
+    margin: 0 auto;
   }
 
   .modal-content {
@@ -516,11 +556,16 @@ html {
   .modal-content .modal-item {
     background-color: #f5f5f7;
     margin-bottom: 20px;
-    padding: 64px 24px ;
+    padding: 64px 24px;
     font-size: 20px;
     font-weight: 700;
     border-radius: 30px;
   }
+
+  .modal-content .modal-item.icon-box {
+    padding: 64px 24px 36px;
+  }
+
 
   .modal-content .modal-item p {
     margin-bottom: 12px;
@@ -531,7 +576,7 @@ html {
   .modal-content .modal-item ul {
     margin-left: 20px;
     font-size: 14px;
-    margin-top: 24px;
+    margin-top: 26px;
   }
 
   .modal-content .modal-item ul li {
@@ -1113,6 +1158,11 @@ html {
     padding: 76px;
   }
 
+  .modal-close .close-icon {
+    width: 36px;
+    height: 36px;
+  }
+
   /*＝＝＝＝＝＝＝＝＝＝ モーダルの内容 ＝＝＝＝＝＝＝＝＝＝*/
   .modal-content .title {
     font-size: 40px;
@@ -1123,6 +1173,10 @@ html {
 
   .modal-content .modal-item {
     padding: 64px 40px;
+  }
+
+  .modal-content .modal-item.icon-box {
+    padding: 64px 40px 36px;
   }
 
   .modal-content .modal-item p {
@@ -1442,11 +1496,14 @@ html {
   .modal-content .title {
     font-size: 48px;
     margin-bottom: 100px;
-
   }
 
   .modal-content .modal-item {
     padding: 64px 56px;
+  }
+
+  .modal-content .modal-item.icon-box {
+    padding: 64px 56px 36px;
   }
 
   .modal-content .modal-item p {
