@@ -1755,18 +1755,28 @@ html {
 
   .president-box {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin-top: 100px;
+    grid-template-columns: 1fr 1.5fr;
+    margin-top: 140px;
     gap: 50px;
     align-content: end;
   }
 
   .president-img {
     margin: 0px 0 50px;
+    aspect-ratio: 1 / 1;
+    background-size: 270%;
+    background-position: 51% 30%;
+  }
+
+  .president-name {
+    text-align: right;
   }
 
   .sec-company .sec-text {
-    font-size: 23px;
+    /* font-size: 23px; */
+    font-size: 22px;
+    line-height: 1.85;
+    letter-spacing: 0.126em;
   }
 
   .map iframe {
