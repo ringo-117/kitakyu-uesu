@@ -2,7 +2,7 @@ const slideCount = document.querySelectorAll('.swiper-slide').length;
 // const enableLoop = slideCount > 5;
 const swiper = new Swiper(".swiper", {
   slidesPerView: 1.2,
-  centeredSlides: true,
+  // centeredSlides: true,
   spaceBetween: 10,
   grabCursor: true,
   // loop: true,
@@ -21,12 +21,12 @@ const swiper = new Swiper(".swiper", {
   breakpoints: {
     // 0px以上（スマホなど）
     0: {
-      slidesPerView: 1.3,
+      slidesPerView: 1.2,
       spaceBetween: 20,
     },
     // 640px以上（タブレットなど）
     640: {
-      slidesPerView: 1.6,
+      slidesPerView: 1.5,
       spaceBetween: 25,
       // centeredSlides: false,
 

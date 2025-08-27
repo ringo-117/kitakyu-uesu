@@ -510,14 +510,14 @@ html {
     position: -webkit-sticky;
     position:         sticky;
     top: 0;
-    padding-top: 16px;
+    padding-top: 20px;
   }
 
   .modal-close .close-icon {
     background-color: #333336;
     border: solid 1px #333336;
-    width: 30px;
-    height: 30px;
+    width: 36px;
+    height: 36px;
     border-radius: 50%;
     align-content: center;
   }
@@ -527,8 +527,8 @@ html {
     top: 13px;
     right: 13px; */
     /* background-color: #ee5852; */
-    width: 15px;
-    height: 15px;
+    width: 13px;
+    height: 13px;
     /* position: relative;
     top: 50%;
     left: 50%;
@@ -540,7 +540,6 @@ html {
   }
 
   .modal-content {
-    overflow-y: auto;
     flex: 1;
     overflow-y: auto; /* ← ここでスクロール */
   }
@@ -549,21 +548,22 @@ html {
   .modal-content .title {
     font-size: 26px;
     font-weight: 700;
-    margin-bottom: 48px;
-    margin-top: 46px;
+    margin-top: 40px;
+    margin-bottom: 52px;
+    line-height: 1.6;
   }
 
   .modal-content .modal-item {
     background-color: #f5f5f7;
     margin-bottom: 20px;
-    padding: 64px 24px;
+    padding: 56px 24px 60px;
     font-size: 20px;
     font-weight: 700;
     border-radius: 30px;
   }
 
   .modal-content .modal-item.icon-box {
-    padding: 64px 24px 36px;
+    padding: 56px 24px 30px;
   }
 
 
@@ -584,19 +584,35 @@ html {
     margin-top: 8px;
   }
 
-  .modal-content .modal-item .item {
-    width: 125px;
-    height: 125px;
-    box-shadow: none;
-    border-radius: 50%;
-    background-color: #D9D9D9;
-  }
-
   .modal-content .modal-item .item-box {
     display: grid;
     grid-template-columns: 125px 125px;
     justify-content: space-between;
-    margin-top: 54px;
+    margin-top: 44px;
+  }
+
+  .modal-content .modal-item .item-img {
+    width: 125px;
+    height: 125px;
+    box-shadow: none;
+    border-radius: 50%;
+    background-color: #fff;
+    position: relative;
+  }
+
+  .modal-content .modal-item .item-info img {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+
+  .modal-content .modal-item .item-info p {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 8px;
+    margin-bottom: 40px;
   }
 
   /*==============================================================
@@ -615,6 +631,11 @@ html {
   }
 
   /* ==================== スライダー ================== */
+  .swiper {
+    padding: 0 22px 90px;
+    position: relative;
+  }
+
   .swiper-slide {
     position: relative;
     /* height: 300px; */
@@ -664,26 +685,52 @@ html {
   .swiper-button-prev {
     transition: opacity 0.3s ease;
   }
-  .swiper-button-next.swiper-button-disabled,
+  /* .swiper-button-next.swiper-button-disabled,
   .swiper-button-prev.swiper-button-disabled {
     opacity: 0;
-    /* transition: opacity 0.3s ease; */
-  }
+    transition: opacity 0.3s ease;
+  } */
 
   /* 右矢印 */
-  .swiper-button-next img {
+  /* .swiper-button-next img {
     width: 52px;
     height: 52px;
-    margin-right: 30px;
-  }
+    margin-top: 200px;
+  } */
 
   /* 左矢印 */
-  .swiper-button-prev img {
+  /* .swiper-button-prev img {
     width: 52px;
     height: 52px;
     transform: scale(-1, 1);
     margin-left: 30px;
+  } */
+
+
+  /* 矢印スタイル共通 */
+  .swiper-arrows .swiper-button-next img,
+  .swiper-arrows .swiper-button-prev img {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
   }
+
+  /* 左矢印 */
+  .swiper-arrows .swiper-button-prev img {
+    transform: scale(-1, 1);
+    margin-left: -225px;
+  }
+
+
+
+  .swiper-arrows {
+    position: absolute;
+    right: 20px;   /* 右からの余白 */
+    bottom: 30px;  /* 下からの余白 */
+    display: flex;
+    z-index: 10;   /* テキストや画像の上に来るように */
+  }
+
 
 
   /*==============================================================
@@ -1150,12 +1197,37 @@ html {
 
   /* モーダル本体 */
   .modal-container {
-    padding: 40px 44px;
+    padding: 20px 44px 40px;
+    /* margin-top: 40px; */
   }
 
   .modal-container .modal-scroll {
     border-radius: 20px;
     padding: 76px;
+    padding: 0;
+    margin: 0;
+    padding-top: 20px;
+    margin-top: 20px;
+  }
+
+  .modal-content {
+    padding: 76px;
+  }
+
+  .modal-close {
+    /* position: absolute;
+    top: 0;
+    right: 0; */
+    /* margin-top: 40px; */
+    /* margin-right: 64px; */
+
+    position: -webkit-sticky;
+    position:         sticky;
+    top: 0;
+    padding-top: 0px;
+    /* margin-top: 20px; */
+    margin-right: 20px;
+
   }
 
   .modal-close .close-icon {
@@ -1166,17 +1238,17 @@ html {
   /*＝＝＝＝＝＝＝＝＝＝ モーダルの内容 ＝＝＝＝＝＝＝＝＝＝*/
   .modal-content .title {
     font-size: 40px;
-    margin-bottom: 64px;
-    margin-top: 0;
+    margin-bottom: 76px;
+    margin-top: -20px;
     line-height: 1.6;
   }
 
   .modal-content .modal-item {
-    padding: 64px 40px;
+    padding: 56px 40px 64px;
   }
 
   .modal-content .modal-item.icon-box {
-    padding: 64px 40px 36px;
+    padding: 60px 40px 30px;
   }
 
   .modal-content .modal-item p {
@@ -1196,17 +1268,21 @@ html {
     margin-top: 18px;
   }
 
-  .modal-content .modal-item .item {
+  .modal-content .modal-item .item-img {
     width: 140px;
     height: 140px;
-    box-shadow: none;
-    border-radius: 50%;
-    background-color: #D9D9D9;
   }
 
   .modal-content .modal-item .item-box {
     grid-template-columns: 140px 140px 140px;
-    margin-top: 64px;
+    margin-top: 56px;
+  }
+
+  .modal-content .modal-item .item-info p {
+    font-size: 16px;
+    margin-top: 12px;
+    margin-bottom: 44px;
+    line-height: 1.7;
   }
 
 
@@ -1217,11 +1293,19 @@ html {
     padding: 0;
   }
 
+  .sec-environment .text-box {
+    padding: 0 25px;
+  }
+
   .sec-environment .text-02 {
     margin: 48px 0 64px;
   }
 
   /* ==================== スライダー ================== */
+  .swiper {
+    padding: 0 25px 150px;
+  }
+
   .swiper-slide .slide-img {
     border-radius: 30px;
   }
@@ -1243,19 +1327,34 @@ html {
   }
 
   /* 右矢印 */
-  .swiper-button-next img {
+  /* .swiper-button-next img {
     width: 76px;
     height: 76px;
     margin-right: 240px;
-    /* margin-right: 440px; */
-  }
+  } */
 
   /* 左矢印 */
-  .swiper-button-prev img {
+  /* .swiper-button-prev img {
     width: 76px;
     height: 76px;
     margin-left: 240px;
-    /* margin-left: 40px; */
+  } */
+
+  /* 矢印スタイル共通 */
+  .swiper-arrows .swiper-button-next img,
+  .swiper-arrows .swiper-button-prev img {
+    width: 72px;
+    height: 72px;
+  }
+
+  /* 左矢印 */
+  .swiper-arrows .swiper-button-prev img {
+    margin-left: -300px;
+  }
+
+  .swiper-arrows {
+    bottom: 40px;
+    margin-right: 22px;
   }
 
   /*==============================================================
@@ -1473,12 +1572,18 @@ html {
   ==============================================================*/
   /* モーダル本体 */
   .modal-container {
-    padding: 40px 73px;
-    max-width: 1340px;
-    margin: 0 auto;
+    padding: 20px 73px 40px;
+    /* max-width: 1340px;
+    margin: 0 auto; */
   }
 
   .modal-container .modal-scroll {
+    position: relative;
+    max-width: 1260px;
+    margin: 20px auto 0;
+  }
+
+  .modal-content {
     padding: 60px 76px 76px;
   }
 
@@ -1494,7 +1599,7 @@ html {
 
   /*＝＝＝＝＝＝＝＝＝＝ モーダルの内容 ＝＝＝＝＝＝＝＝＝＝*/
   .modal-content .title {
-    font-size: 48px;
+    font-size: 49px;
     margin-bottom: 100px;
   }
 
@@ -1510,14 +1615,10 @@ html {
     font-size: 31px;
   }
 
-  .modal-content .modal-item .item {
+  .modal-content .modal-item .item-img  {
     width: 100%;
     height: auto;
-    box-shadow: none;
-    border-radius: 50%;
-    background-color: #D9D9D9;
     aspect-ratio: 1 / 1;
-    margin-bottom: 21%;
   }
 
   .modal-content .modal-item ul {
@@ -1541,7 +1642,11 @@ html {
     margin-top: 64px;
   }
 
-  
+  .modal-content .modal-item .item-info p {
+    font-size: 18px;
+    margin-top: 12px;
+    margin-bottom: 21%;
+  }
 
 
 
@@ -1553,6 +1658,11 @@ html {
   }
 
   /* ==================== スライダー ================== */
+
+  .swiper {
+    padding: 0 25px;
+  }
+
   .swiper-wrapper {
     display: grid !important;   /* flex を grid に上書き */
     grid-template-columns: repeat(2, 1fr); /* 2列 */
@@ -1593,6 +1703,12 @@ html {
   .sec-company .sec-text {
     font-size: 30px;
   }
+
+
+  /* .company-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  } */
 
   /*==============================================================
     　　PC_よくある質問 faq

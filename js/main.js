@@ -69,6 +69,16 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // モーダル外クリックで閉じる
+  modals.forEach(modal => {
+    modal.addEventListener('click', (e) => {
+      // modal-scroll の中身をクリックしたときは閉じない
+      if (e.target === modal) {
+        closeModal();
+      }
+    });
+  });
+
   // 共通の閉じる関数
   function closeModal() {
     modals.forEach(m => m.classList.remove('active'));
