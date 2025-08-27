@@ -23,7 +23,8 @@ html {
   /* スマホ用レイアウト 320px以上の範囲に収めるデザインはこの中に記述 */
 
   .pc-nav,
-  .sp-none {
+  .sp-none,
+  .pc-only {
     display: none;
   }
 
@@ -1522,6 +1523,7 @@ html {
 
 @media screen and (min-width: 1024px) {
   /* パソコン用レイアウト 1024px以上の範囲に収めるデザインはこの中に記述 */
+  
   /*==============================================================
     　　PC_ヘッダー
   ==============================================================*/
@@ -1713,13 +1715,16 @@ html {
   /*==============================================================
     　　PC_会社情報 company
   ==============================================================*/
-  .company-info .info-item {
+  .company-info {
     margin-top: 40px;
   }
+
+
 
   .company-info .info-item {
     grid-template-columns: 240px 1fr;
     font-size: 30px;
+    padding: 40px 25px;
   }
 
   .map p {
@@ -1731,10 +1736,8 @@ html {
   }
 
 
-  /* .company-info {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  } */
+
+
 
   /*==============================================================
     　　PC_よくある質問 faq
@@ -1803,6 +1806,15 @@ html {
 
   .sp-nav {
     display: none;
+  }
+
+
+
+  .pc-none {
+    display: none;
+  }
+  .pc-only {
+    display: block;
   }
 
   /*==============================================================
@@ -1897,6 +1909,45 @@ html {
   ==============================================================*/
   .sec-acceptance .note-box {
     margin: 30px 0 100px;
+  }
+
+
+  /*==============================================================
+    　　PC-big_会社情報 company
+  ==============================================================*/
+
+  .company-info .info-item {
+    grid-template-columns: 170px 1fr;
+    font-size: 23px;
+    padding: 35px 25px;
+  }
+
+  .company-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+  }
+
+  .map {
+    margin-top: -1px;
+    margin-bottom: 10px;
+    margin-left: -0px;
+  }
+
+  .president-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 100px;
+    gap: 50px;
+    align-content: end;
+  }
+
+  .president-img {
+    margin: 0px 0 50px;
+  }
+
+  .sec-company .sec-text {
+    font-size: 23px;
   }
 
   /*==============================================================
