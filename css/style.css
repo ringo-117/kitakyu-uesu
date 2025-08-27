@@ -1756,9 +1756,10 @@ html {
   .president-box {
     display: grid;
     grid-template-columns: 1fr 1.5fr;
-    margin-top: 140px;
+    margin-top: 150px;
     gap: 50px;
     align-content: end;
+    margin-bottom: 40px;
   }
 
   .president-img {
