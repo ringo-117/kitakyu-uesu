@@ -891,8 +891,8 @@ html {
 
   .faq-A p span {
     font-size: calc((29 / 750) * 100vw);
-    margin-right: 8px;
-    margin-left: 2px;
+    margin-right: 9px;
+    margin-left: 1px;
     font-weight: 600;
   }
 
