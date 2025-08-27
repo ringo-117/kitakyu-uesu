@@ -1073,7 +1073,8 @@ html {
 
   .sec-hero .title {
     /* font-size: 40px; */
-    font-size: 80px;
+    /* font-size: 80px; */
+    font-size: 56px;
   }
 
   .sec {
@@ -1521,7 +1522,8 @@ html {
   }
 
   .sec-hero .title {
-    font-size: 9.3vw;
+    /* font-size: 9.3vw; */
+    font-size: 7vw;
   }
 
   .sec {
@@ -1826,7 +1828,7 @@ html {
 
   .sec-hero .title {
     /* font-size: 117px; */
-    font-size: 9.5vw;
+    font-size: 7vw;
   }
 
   /*==============================================================
