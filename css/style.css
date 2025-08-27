@@ -875,7 +875,8 @@ html {
     align-items: start;
   }
 
-  .text-Q {
+  .text-Q,
+  .faq-A {
     display: flex;
   }
 
@@ -888,6 +889,13 @@ html {
     font-weight: 400;
   }
 
+  .faq-A p span {
+    font-size: calc((29 / 750) * 100vw);
+    margin-right: 8px;
+    margin-left: 2px;
+    font-weight: 600;
+  }
+
   .faq-content {
     max-height: 0;
     overflow: hidden;
@@ -897,9 +905,10 @@ html {
     line-height: 1.8;
     letter-spacing: .073em;
     font-size: calc((28 / 750) * 100vw);
-    padding: 0 23px 40px 0;
-    /* font-weight: 700; */
-    font-weight: 400;
+    /* padding: 0 23px 40px 0; */
+    padding: 0 30px 40px 0;
+    font-weight: 600;
+    /* font-weight: 400; */
   }
 
   .faq-content {
@@ -1072,8 +1081,6 @@ html {
   }
 
   .sec-hero .title {
-    /* font-size: 40px; */
-    /* font-size: 80px; */
     font-size: 58px;
     line-height: 1.22;
   }
@@ -1412,7 +1419,7 @@ html {
 
   .faq-title {
     /* padding: 35px 40px 25px 0; */
-    padding: 35px 40px 25px 8px;
+    padding: 35px 40px 35px 8px;
     font-size: 23px;
   }
 
@@ -1427,6 +1434,13 @@ html {
 
   .faq-box p span {
     font-size: 23px;
+  }
+
+  .faq-A p span {
+    font-size: 22px;
+    margin-right: 11px;
+    margin-left: 2px;
+    /* font-weight: 600; */
   }
 
   .faq-content .faq-A {
@@ -1731,6 +1745,7 @@ html {
 
   .faq-title {
     font-size: 30px;
+    padding: 40px 40px 40px 8px;
   }
 
   .faq-title::after {
@@ -1742,8 +1757,15 @@ html {
     font-size: 30px;
   }
 
+  .faq-A p span {
+    font-size: 28px;
+    margin-right: 14px;
+    margin-left: 3px;
+  }
+
   .faq-content .faq-A {
     font-size: 28px;
+    padding: 0 60px 60px 8px;
   }
 
   /*==============================================================
