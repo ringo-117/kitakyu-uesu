@@ -37,6 +37,10 @@ html {
     font-weight: bold;
   }
 
+  a {
+    cursor: pointer;
+  }
+
 
   /*==============================================================
     　　ヘッダー
@@ -318,10 +322,6 @@ html {
     /* letter-spacing: .073em; */
     font-size: calc((29 / 750) * 100vw);
   }
-
-  /* .btn-style a {
-    
-  } */
 
   /* ==================== 画像 ================== */
   .cycle-container {
