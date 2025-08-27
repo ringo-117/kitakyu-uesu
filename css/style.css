@@ -1118,10 +1118,15 @@ html {
   .btn-style {
     width: 480px;
     height: 84px;
-    margin: 0 auto;
+    /* margin: 0 auto; */
     border-radius: 50px;
     letter-spacing: .1em;
     font-size: 28px;
+  }
+
+  .btn-con {
+    max-width: 480px;
+    margin: 0 auto;
   }
 
   /* ==================== 画像 ================== */
