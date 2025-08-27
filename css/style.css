@@ -893,7 +893,7 @@ html {
     font-size: calc((29 / 750) * 100vw);
     margin-right: 9px;
     margin-left: 1px;
-    font-weight: 600;
+    font-weight: 400;
   }
 
   .faq-content {
@@ -907,8 +907,8 @@ html {
     font-size: calc((28 / 750) * 100vw);
     /* padding: 0 23px 40px 0; */
     padding: 0 30px 40px 0;
-    font-weight: 600;
-    /* font-weight: 400; */
+    /* font-weight: 600; */
+    font-weight: 400;
   }
 
   .faq-content {
