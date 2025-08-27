@@ -1074,7 +1074,8 @@ html {
   .sec-hero .title {
     /* font-size: 40px; */
     /* font-size: 80px; */
-    font-size: 56px;
+    font-size: 58px;
+    line-height: 1.22;
   }
 
   .sec {
