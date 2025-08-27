@@ -319,6 +319,10 @@ html {
     font-size: calc((29 / 750) * 100vw);
   }
 
+  /* .btn-style a {
+    
+  } */
+
   /* ==================== 画像 ================== */
   .cycle-container {
     position: relative;
@@ -1782,6 +1786,7 @@ html {
     display: flex;
     padding: 0;
     position: relative;
+    margin-top: 20px;
   }
 
   .header .nav-item {
