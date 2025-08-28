@@ -236,15 +236,22 @@ html {
     padding: 0 22px;
   }
 
-  .hero-slide {
+  .sec-hero .swiper {
+    padding: 0;
+  }
+
+  .hero-swiper {
     margin-top: 25px;
+  }
+
+  .hero-swiper .swiper-slide {
+    aspect-ratio: 344 / 400;
   }
 
   .hero-img {
     width: 100%;
     height: 100%;
     overflow: hidden;
-    aspect-ratio: 344 / 400;
   }
 
   .hero-img img {
@@ -1091,7 +1098,7 @@ html {
     scroll-margin-top: 140px;
   }
 
-  .hero-slide {
+  .hero-swiper {
     margin-top: 30px;
   }
 
@@ -1558,7 +1565,7 @@ html {
     margin: 0 auto;
   }
 
-  .hero-slide {
+  .hero-swiper {
     margin-top: 40px;
     aspect-ratio: 1.5;
   }
@@ -1692,18 +1699,18 @@ html {
 
   /* ==================== スライダー ================== */
 
-  .swiper {
+  .sec-environment .swiper {
     padding: 0 2px;
   }
 
-  .swiper-wrapper {
+  .sec-environment .swiper-wrapper {
     display: grid !important;   /* flex を grid に上書き */
     grid-template-columns: repeat(2, 1fr); /* 2列 */
     gap: 16px; /* カード間の余白 */
     transform: none !important;
     margin-left: 0 !important;
   }
-  .swiper-slide {
+  .sec-environment .swiper-slide {
     width: auto !important; /* Swiperの幅指定を無効化 */
     margin: 0 !important;
   }
