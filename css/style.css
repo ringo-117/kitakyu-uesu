@@ -697,26 +697,10 @@ html {
   .swiper-button-prev {
     transition: opacity 0.3s ease;
   }
-  /* .swiper-button-next.swiper-button-disabled,
+  .swiper-button-next.swiper-button-disabled,
   .swiper-button-prev.swiper-button-disabled {
-    opacity: 0;
-    transition: opacity 0.3s ease;
-  } */
-
-  /* 右矢印 */
-  /* .swiper-button-next img {
-    width: 52px;
-    height: 52px;
-    margin-top: 200px;
-  } */
-
-  /* 左矢印 */
-  /* .swiper-button-prev img {
-    width: 52px;
-    height: 52px;
-    transform: scale(-1, 1);
-    margin-left: 30px;
-  } */
+    opacity: 0.4;
+  }
 
 
   /* 矢印スタイル共通 */
@@ -733,8 +717,6 @@ html {
     margin-left: -225px;
   }
 
-
-
   .swiper-arrows {
     position: absolute;
     right: 20px;   /* 右からの余白 */
@@ -742,6 +724,8 @@ html {
     display: flex;
     z-index: 10;   /* テキストや画像の上に来るように */
   }
+
+
 
 
 
