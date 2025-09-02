@@ -1,6 +1,8 @@
-const slideCount = document.querySelectorAll('.swiper-slide').length;
+
+
+// const slideCount = document.querySelectorAll('.swiper-slide').length;
 // const enableLoop = slideCount > 4;
-const swiper = new Swiper(".swiper", {
+const uesuSwiper = new Swiper(".uesu-slider", {
   // slidesPerView: "auto",
   slidesPerView: 1.2,
   slidesPerGroup: 1,
