@@ -941,15 +941,43 @@ html {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 100px 100px 100px;
-    gap: 10px;
+    /* gap: 10px; */
+    gap: 8px;
   }
 
   .link-box div {
     background-color: #E4E3E3;
+    overflow: hidden;
   }
 
   .sec-instagram .btn-style {
     margin-top: 45px;
+  }
+
+  /* .snapwidget-widget {
+    pointer-events: none;
+    cursor: default;
+  } */
+
+  /* インスタ画像 */
+  .sec-instagram .link-box .inst-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+    display: block;
+  }
+
+  .sec-instagram .link-box .inst-item.item-02 img {
+    object-position: 50% 5%;
+  }
+
+  .sec-instagram .link-box .inst-item.item-03 img {
+    object-position: 50% 25%;
+  }
+
+  .sec-instagram .link-box .inst-item.item-06 img {
+    object-position: 50% 75%;
   }
 
 
@@ -1458,7 +1486,8 @@ html {
 
   .link-box {
     grid-template-rows: 250px 250px 250px;
-    gap: 18px;
+    /* gap: 18px; */
+    gap: 16px;
   }
 
   .sec-instagram .btn-style {
@@ -1824,6 +1853,7 @@ html {
   ==============================================================*/
   .link-box {
     grid-template-rows: 341px 341px 341px;
+    gap: 18px;
   }
 
   .sec-instagram .btn-style {
@@ -1979,6 +2009,11 @@ html {
   .sec-instagram .btn-style {
     margin-top: 80px;
   }
+
+  .sec-instagram .link-box .inst-item:hover img {
+    transform: scale(1.1);
+  }
+
 
   /*==============================================================
     　　PC-big_フッター
