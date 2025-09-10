@@ -288,9 +288,9 @@ html {
     margin-bottom: 7px;
   }
 
-  /* .nav-item.btn-box .contact img {
+  .nav-item.btn-box .contact img {
     margin-bottom: 5px;
-  } */
+  }
 
   .nav-item.btn-box .contact .btn-arrow,
   .nav-item.btn-box .map .btn-arrow {
@@ -1254,6 +1254,10 @@ html {
 
   .hero-swiper {
     margin-top: 30px;
+  }
+
+  .nav-item.btn-box .contact img {
+    margin-bottom: 7.5px;
   }
 
   /*==============================================================
