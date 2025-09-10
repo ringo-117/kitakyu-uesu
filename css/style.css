@@ -64,6 +64,16 @@ html {
     align-items: center;
   }
 
+  /* .header .logo-box.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    z-index: 2;
+    filter: brightness(0.4);
+    transition: all 0.5s ease;
+  } */
+
+
   /* .logo-box.active {
     display: none;
   } */
@@ -89,10 +99,31 @@ html {
 
   .btn {
     position: fixed;
+    top: 33px;
     width: 22px;
     height: 16px;
     right: 26px;
     margin-bottom: 0.8px;
+    z-index: 23;
+  }
+
+
+  .btn .maru {
+    border: solid 1.5px #379E49;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    position: absolute;
+    top: -15px;
+    left: -17px;
+    opacity: 0;
+    transition: all 0.5s ease;
+    pointer-events: none;
+  }
+
+  .btn.active .maru{
+    opacity: 1;
+    pointer-events: auto;
   }
 
   .btn i {
@@ -103,6 +134,8 @@ html {
     background-color: #379E49;
     transition: 0.5s;
   }
+
+
 
   .btn i:nth-of-type(1){
     top: 0;
@@ -118,8 +151,10 @@ html {
 
   .btn.active i:nth-of-type(1){
     transform: translateY(6.5px) rotate(45deg);
-    width: 28px;
-    margin-right: 2.5px;
+    /* width: 28px; */
+    /* margin-right: 2.5px; */
+    width: 20px;
+    margin-right: 6px;
   }
 
   .btn.active i:nth-of-type(2){
@@ -128,24 +163,46 @@ html {
 
   .btn.active i:nth-of-type(3){
     transform: translateY(-6.5px) rotate(-45deg);
-    width: 28px;
-    margin-right: 2.5px;
+    /* width: 28px; */
+    /* margin-right: 2.5px; */
+    width: 20px;
+    margin-right: 6px;
   }
 
   /* メニューのデザイン*/
-  .container {
+  /* .container {
     width: 100%;
     height: 100%;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 9;
-    background: #ffffff;
+    background: #2f8f2f;
     transition: .5s;
     opacity: 0;
     overflow: hidden;
     overflow-y: scroll;
     pointer-events: none;
+  } */
+
+  .container {
+    width: 85%;
+    /* height: 100%; */
+    min-width: 332px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    /* z-index: 9; */
+    z-index: 22;
+    background: #fff;
+    transition: .5s;
+    opacity: 0;
+    overflow: hidden;
+    overflow-y: scroll;
+    pointer-events: none;
+
+    /* margin-left: 50px; */
+    border-radius: 0 0 0 25px;
   }
 
   .container.active{
@@ -153,33 +210,66 @@ html {
     pointer-events: auto;
   }
 
+  .cover {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 21; /* containerのz-indexより小さくする */
+    /* display: none; */
+    opacity: 0;
+    transition: all 0.5s ease;
+    pointer-events: none;
+    display: none;
+  }
+
+  .cover.active {
+    display: block;
+    opacity: 1;
+    pointer-events: auto;
+  }
+
   .nav-list {
-    padding: 50px 0 0 45px;
+    padding: 90px 50px 50px;
   }
 
   .nav-item {
-    /* letter-spacing: 0.1em; */
     letter-spacing: .073em;
-    font-weight: 700;
-    margin-bottom: 12px;
-    font-size: 24px;
+    /* font-weight: 700; */
+    /* margin-bottom: 12px; */
+    /* font-size: 24px; */
+
+
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 20px;
   }
 
   .nav-item.sns {
     font-family: 'Roboto';
-    font-size: 27px;
+    /* font-size: 27px; */
     letter-spacing: 0.05em;
+
+    font-size: 17px;
+    font-weight: 500;
   }
 
   .nav-item.btn-box {
-    padding-right: 45px;
-    margin-top: 32px;
+    /* padding-right: 45px; */
+    /* margin-top: 32px; */
+
+
+    margin-top: 58px;
+
   }
 
   .nav-item.btn-box .btn-style {
     position: relative;
     height: 53px;
     border-radius: 50px;
+    font-size: 14px;
   }
 
   .nav-item.btn-box .btn-style p {
@@ -197,6 +287,10 @@ html {
     width: 14px;
     margin-bottom: 7px;
   }
+
+  /* .nav-item.btn-box .contact img {
+    margin-bottom: 5px;
+  } */
 
   .nav-item.btn-box .contact .btn-arrow,
   .nav-item.btn-box .map .btn-arrow {
@@ -225,6 +319,14 @@ html {
   .nav-item.btn-box .map .btn-arrow {
     background-color: #fff;
   }
+
+  /* .container .cover {
+    width: 100%;
+    height: 100vh;
+    background-color: #000000;
+    opacity: 0.6;
+    padding-left: 50px;
+  } */
 
   /*==============================================================
     　　ヒーロー
@@ -1053,23 +1155,57 @@ html {
    font-size: 20px;
   }
 
+  .btn {
+    position: fixed;
+    top: 36px;
+    width: 22px;
+    height: 16px;
+    right: 26px;
+    margin-bottom: 0.8px;
+    z-index: 23;
+  }
+
   /* メニューのデザイン*/
+  .container {
+    width: 52%;
+    border-radius: 0 0 0 30px;
+  }
+
+  .nav-list {
+    padding: 120px 70px 70px;
+  }
+
+  .nav-item {
+    font-size: 18px;
+    margin-bottom: 32px;
+
+  }
+
+  .nav-item.sns {
+    font-size: 21px;
+  }
+
   .nav-item.btn-box {
-    /* max-width: 230px; */
-    padding-right: 0;
-    margin-top: 38px;
+    /* padding-right: 0; */
+    /* margin-top: 38px; */
+
+    margin-top: 78px;
   }
 
   .nav-item.btn-box .btn-style {
-    width: 320px;
+    /* width: 320px; */
     margin: 0;
     height: 65px;
     border-radius: 50px;
     font-size: 18px;
+
+    width: 300px;
+    font-size: 18px;
   }
 
   .nav-item.btn-box .contact {
-    margin-bottom: 12px;
+    /* margin-bottom: 12px; */
+    margin-bottom: 14px;
   }
 
   .nav-item.btn-box img {
@@ -1087,14 +1223,16 @@ html {
     font-size: 20px;
   }
 
-  .nav-list {
+  /* .nav-list {
     position: absolute;
     top: 50%;
     left: 0;
     transform: translateY(-50%);
     padding-top: 0;
     padding-bottom: 60px;
-  }
+  } */
+
+
 
 
   /*==============================================================
@@ -1556,7 +1694,18 @@ html {
   /*==============================================================
     　　PC_ヘッダー
   ==============================================================*/
-  
+  /* メニューのデザイン*/
+  .container {
+    width: 40%;
+  }
+
+  .nav-item.btn-box .btn-style {
+    width: 100%;
+  }
+
+  .nav-item.btn-box {
+    margin-top: 72px;
+  }
 
   /*==============================================================
     　　PC_ヒーロー
