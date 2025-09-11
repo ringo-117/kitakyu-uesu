@@ -872,8 +872,11 @@ html {
 
   .company-info .info-item .tel {
     color: #379E49;
-    border-bottom: solid 1px #379E49;
     font-weight: 600;
+    text-decoration: underline;
+    text-decoration-color: #379E49;
+    text-decoration-thickness: 1.3px;
+    text-underline-offset: 4px;
   }
 
   .company-info .job .item {
@@ -884,7 +887,6 @@ html {
   .company-info .job .item.item-02 {
     margin-top: 10px;
   }
-
 
   .map {
     margin-top: 30px;
@@ -1563,7 +1565,8 @@ html {
   }
 
   .company-info .info-item .tel {
-    border-bottom: solid 1.6px #379E49;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 6px;
   }
 
   .company-info .job .item {
@@ -1918,8 +1921,9 @@ html {
   }
 
   .company-info .info-item .tel {
-    border-bottom: solid 1.8px #379E49;
     font-weight: 500;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 8px;
   }
 
   .map p {
@@ -2156,6 +2160,11 @@ html {
     font-size: 23px;
     padding: 35px 25px;
   } */
+
+  .company-info .info-item .tel {
+    text-decoration-thickness: 2.5px;
+    text-underline-offset: 8px;
+  }
 
   /*==============================================================
     　　PC-big_よくある質問 faq
