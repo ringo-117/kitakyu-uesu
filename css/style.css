@@ -870,6 +870,12 @@ html {
     border-bottom: none;
   }
 
+  .company-info .info-item .tel {
+    color: #379E49;
+    border-bottom: solid 1px #379E49;
+    font-weight: 600;
+  }
+
   .company-info .job .item {
     display: grid;
     grid-template-columns: 14px 1fr;
@@ -1556,6 +1562,10 @@ html {
     padding: 35px 25px;
   }
 
+  .company-info .info-item .tel {
+    border-bottom: solid 1.6px #379E49;
+  }
+
   .company-info .job .item {
     grid-template-columns: 25px 1fr;
   }
@@ -1901,12 +1911,15 @@ html {
     margin-top: 40px;
   }
 
-
-
   .company-info .info-item {
     grid-template-columns: 240px 1fr;
     font-size: 30px;
     padding: 40px 25px;
+  }
+
+  .company-info .info-item .tel {
+    border-bottom: solid 1.8px #379E49;
+    font-weight: 500;
   }
 
   .map p {
