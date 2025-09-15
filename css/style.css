@@ -2212,12 +2212,13 @@ html {
 
   .btn-style {
     transition: all 0.3s;
+    border: solid 2px #379E49;
   }
 
   .btn-style:hover {
     color: #379E49;
     background-color: #fff;
-    border: solid 2px #2f8f2f;
+    border: solid 2px #379E49;
     /* opacity: 0.6; */
   }
 
