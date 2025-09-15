@@ -1197,7 +1197,9 @@ html {
   }
 
   .foot-link a {
-    margin-right: 7px;
+    /* margin-right: 7px; */
+    margin-right: 10px;
+
   }
 
   .footer .copy {
@@ -1761,7 +1763,8 @@ html {
   }
 
   .foot-link a {
-    margin-right: 12px;
+    /* margin-right: 12px; */
+    margin-right: 16px;
   }
 
   .footer .copy {
