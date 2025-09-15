@@ -164,3 +164,40 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+// =============================
+// ロード時：トップセクションをフェードアップ
+// =============================
+// window.addEventListener('DOMContentLoaded', () => {
+//   const secTop = document.querySelector('.sec-top');
+//   if (secTop) {
+//     secTop.classList.add('fade-left');
+//   }
+// });
+
+// =============================
+// スクロール出現アニメーション
+// =============================
+// .fade : その場でフェード
+// .fade-up  : 下からフェードアップ
+// .zoom-img: 拡大→通常サイズ
+// .fade-right : 右からフェードイン
+// .img-wrap　:　左から表示
+// 追加したいクラスがあれば selector に追記
+// =============================
+document.addEventListener('DOMContentLoaded', () => {
+  const targets = document.querySelectorAll('.fade, .fade-up, .zoom-img, .fade-right, .img-wrap');
+  if (targets.length === 0) return; // 対象がなければ何もしない
+
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+        obs.unobserve(entry.target); // 一度表示されたら監視終了
+      }
+    });
+  }, {
+    threshold: 0.2 // 20% 見えたら発火
+  });
+
+  targets.forEach(target => observer.observe(target));
+});

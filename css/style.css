@@ -42,6 +42,83 @@ html {
     cursor: pointer;
   }
 
+  /*==============================================================
+    　　アニメーション
+  ==============================================================*/
+  /* ==================== フェード ================== */
+  /* その場でフェード */
+  .fade {
+    opacity: 0;
+    transition: all 1.3s ease-out;
+  }
+
+  .fade.show {
+    opacity: 1;
+  }
+
+  /* ==================== フェードアップ（ページ内）================== */
+  /* アニメーション前の状態 */
+  .fade-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 1s ease-out;
+  }
+
+  /* 表示されたらこのクラスが付く */
+  .fade-up.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* 遅延用クラス */
+  .delay-1 {
+    transition-delay: 0.3s;
+  }
+  .delay-2 {
+    transition-delay: 0.6s;
+  }
+  .delay-3 {
+    transition-delay: 0.9s;
+  }
+
+  /* ==================== 画像（横表示）================== */
+  .img-wrap {
+    opacity: 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .img-wrap img {
+    display: block;
+    width: 100%;
+    height: auto;
+    transform: scale(1.05); /* ちょっと拡大しておくとプロっぽく見える */
+    transition: transform 0.8s ease;
+  }
+
+  .img-wrap.show {
+    opacity: 1;
+  }
+
+  .img-wrap.show img {
+    transform: scale(1); /* 元のサイズに戻す */
+  }
+
+  /* マスクアニメーション */
+  .img-wrap::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: #fff;
+    transform: translateX(0); /* 初期状態は全体覆う */
+    z-index: 1;
+    transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .img-wrap.show::before {
+    transform: translateX(100%); /* 右にスライドして消える */
+  }
+
 
   /*==============================================================
     　　ヘッダー
@@ -830,10 +907,6 @@ html {
     display: flex;
     z-index: 10;   /* テキストや画像の上に来るように */
   }
-
-
-
-
 
   /*==============================================================
     　　会社情報 company
@@ -2077,6 +2150,38 @@ html {
     margin: 0;
     padding-left: 32px;
     font-weight: bold;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .header .nav-item:hover {
+    color: #2f8f2f;
+  }
+
+  /* ==================== navリンク＿ホバー ================== */
+  /* リンク全体に基準を設定 */
+  .nav-item a {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 4px;
+  }
+
+  /* 疑似要素でアニメーション下線を作成 */
+  .nav-item a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #379E49;
+    transform: scaleX(0);
+    transform-origin: left center; /* ← 常に左基準 */
+    transition: transform 0.3s ease;
+  }
+
+  /* ホバー時：左からスライド表示 */
+  .nav-item a:hover::after {
+    transform: scaleX(1);
   }
 
   .logo-box img {
@@ -2103,6 +2208,17 @@ html {
   .sec-hero .title {
     /* font-size: 117px; */
     font-size: 7vw;
+  }
+
+  .btn-style {
+    transition: all 0.3s;
+  }
+
+  .btn-style:hover {
+    color: #379E49;
+    background-color: #fff;
+    border: solid 2px #2f8f2f;
+    /* opacity: 0.6; */
   }
 
   /*==============================================================
@@ -2164,6 +2280,11 @@ html {
   .company-info .info-item .tel {
     text-decoration-thickness: 2.5px;
     text-underline-offset: 8px;
+    transition: transform 0.3s ease;
+  }
+
+  .company-info .info-item .tel:hover {
+    opacity: 0.6;
   }
 
   /*==============================================================
@@ -2193,10 +2314,26 @@ html {
   /*==============================================================
     　　PC-big_フッター
   ==============================================================*/
-  /* .foot-con {
-    max-width: 1180px;
-    margin: 0 auto;
-  } */
+  .footer .site-links a {
+    transition: all 0.3s ease-in-out;
+  }
+
+  .footer .site-links a:hover {
+    /* color: #2f8f2f; */
+    opacity: 0.4;
+    /* font-weight: bold; */
+  }
+
+  .footer .foot-link a {
+    transition: all 0.3s ease-in-out;
+  }
+
+  .footer .foot-link a:hover {
+    /* color: #2f8f2f; */
+    opacity: 0.6;
+  }
+
+
 
 
 
