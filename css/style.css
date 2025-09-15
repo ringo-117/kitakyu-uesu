@@ -7,7 +7,6 @@ body {
   font-family: 'Noto Sans JP';
 
   font-feature-settings: 'palt' 1;
-  /* letter-spacing: 0.05em; */
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   color: #000000;
@@ -126,7 +125,6 @@ html {
   .header {
     position: fixed;
     width: 100%;
-    /* height: 80px; */
     background-color: #fff;
     display: flex;
     align-items: center;
@@ -141,24 +139,8 @@ html {
     align-items: center;
   }
 
-  /* .header .logo-box.active {
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
-    z-index: 2;
-    filter: brightness(0.4);
-    transition: all 0.5s ease;
-  } */
-
-
-  /* .logo-box.active {
-    display: none;
-  } */
-
   .logo-box img {
-    /* height: 40px; */
     height: 43px;
-    /* margin-bottom: 0.8px; */
     margin-right: 10px;
   }
 
@@ -228,8 +210,6 @@ html {
 
   .btn.active i:nth-of-type(1){
     transform: translateY(6.5px) rotate(45deg);
-    /* width: 28px; */
-    /* margin-right: 2.5px; */
     width: 20px;
     margin-right: 6px;
   }
@@ -240,36 +220,17 @@ html {
 
   .btn.active i:nth-of-type(3){
     transform: translateY(-6.5px) rotate(-45deg);
-    /* width: 28px; */
-    /* margin-right: 2.5px; */
     width: 20px;
     margin-right: 6px;
   }
 
   /* メニューのデザイン*/
-  /* .container {
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 9;
-    background: #2f8f2f;
-    transition: .5s;
-    opacity: 0;
-    overflow: hidden;
-    overflow-y: scroll;
-    pointer-events: none;
-  } */
-
   .container {
     width: 85%;
-    /* height: 100%; */
     min-width: 332px;
     position: fixed;
     top: 0;
     right: 0;
-    /* z-index: 9; */
     z-index: 22;
     background: #fff;
     transition: .5s;
@@ -277,8 +238,6 @@ html {
     overflow: hidden;
     overflow-y: scroll;
     pointer-events: none;
-
-    /* margin-left: 50px; */
     border-radius: 0 0 0 25px;
   }
 
@@ -295,7 +254,6 @@ html {
     height: 100vh;
     background: rgba(0, 0, 0, 0.6);
     z-index: 21; /* containerのz-indexより小さくする */
-    /* display: none; */
     opacity: 0;
     transition: all 0.5s ease;
     pointer-events: none;
@@ -314,11 +272,6 @@ html {
 
   .nav-item {
     letter-spacing: .073em;
-    /* font-weight: 700; */
-    /* margin-bottom: 12px; */
-    /* font-size: 24px; */
-
-
     font-size: 14px;
     font-weight: 600;
     margin-bottom: 20px;
@@ -326,20 +279,13 @@ html {
 
   .nav-item.sns {
     font-family: 'Roboto';
-    /* font-size: 27px; */
     letter-spacing: 0.05em;
-
     font-size: 17px;
     font-weight: 500;
   }
 
   .nav-item.btn-box {
-    /* padding-right: 45px; */
-    /* margin-top: 32px; */
-
-
     margin-top: 58px;
-
   }
 
   .nav-item.btn-box .btn-style {
@@ -397,20 +343,11 @@ html {
     background-color: #fff;
   }
 
-  /* .container .cover {
-    width: 100%;
-    height: 100vh;
-    background-color: #000000;
-    opacity: 0.6;
-    padding-left: 50px;
-  } */
-
   /*==============================================================
     　　ヒーロー
   ==============================================================*/
   .sec-hero {
     margin-top: 115px;
-    /* height: calc(100vh - 80px); */
     position: relative;
     padding: 0 22px;
   }
@@ -441,7 +378,6 @@ html {
 
   .sec-hero .title {
     font-family: 'Roboto';
-    /* font-size: 29px; */
     font-size: 34px;
     font-weight: bold;
     line-height: 1.2;
@@ -468,7 +404,6 @@ html {
   .sec-text {
     display: inline-block;
     font-size: calc((29 / 750) * 100vw);
-    /* font-weight: 700; */
     font-weight: 400;
     letter-spacing: .184em;
   }
@@ -483,9 +418,6 @@ html {
   .cycle-img {
     width: 100%;
     height: 100%;
-    /* overflow: hidden; */
-    /* margin-top: 40px;
-    margin-bottom: 60px; */
     padding: 40px 22px 54px;
   }
 
@@ -506,7 +438,6 @@ html {
     background-color: #379E49;
     border-radius: 25px;
     letter-spacing: .1em;
-    /* letter-spacing: .073em; */
     font-size: calc((29 / 750) * 100vw);
   }
 
@@ -516,12 +447,8 @@ html {
     width: calc(100% - 44px);
     max-width: 600px; /* PC ならもっと広げてもOK */
     aspect-ratio: 1 / 1; /* スマホでは正円 */
-    margin: auto;
-    /* border: 2px dashed #2f8f2f; */
     border: 3px dotted #2f8f2f; /* 点線の円 */
     border-radius: 50%; /* 円にする */
-    /* box-sizing: border-box; */
-
     margin: 50px auto;
   }
 
@@ -592,11 +519,6 @@ html {
     font-weight: 400;
   }
 
-  /* .sec-acceptance .item .text .color {
-    font-weight: bold;
-    font-weight: 800;
-  } */
-
   .sec-acceptance .note {
     font-size: calc((29 / 750) * 100vw);
     font-weight: 400;
@@ -632,7 +554,6 @@ html {
   /* モーダル本体 */
   .modal-container {
     width: 100%;
-    /* max-width: 90%; */
     height: 100%;
     position: fixed;
     top: 0;
@@ -643,17 +564,11 @@ html {
     opacity: 0;
     pointer-events: none;
     transition: 0.3s;
-    /* max-height: 80vh; */
-    /* overflow-y: auto; */
     letter-spacing: 0.03em;
-
     overflow-y: auto;
-    /* padding-top: 20px; */
   }
 
   .modal-container .modal-scroll {
-    /* margin-top: 46px; */
-    /* margin-top: 20px; */
     padding: 0 20px 76px;
     background-color: #ffffff;
     border-radius: 20px 20px 0 0;
@@ -714,16 +629,8 @@ html {
   }
 
   .modal-close .close-icon img {
-    /* position: absolute;
-    top: 13px;
-    right: 13px; */
-    /* background-color: #ee5852; */
     width: 13px;
     height: 13px;
-    /* position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); */
     padding-bottom: 0;
     display: grid;
     place-content: center;
@@ -829,7 +736,6 @@ html {
 
   .swiper-slide {
     position: relative;
-    /* height: 300px; */
     aspect-ratio: 4 / 3;
   }
 
@@ -920,7 +826,6 @@ html {
     gap: 12px 20px;
     margin: 0 auto;
     font-size: calc((29 / 750) * 100vw);
-    /* font-weight: 700; */
     font-weight: 400;
     letter-spacing: .073em;
     line-height: 1.6;
@@ -1006,7 +911,6 @@ html {
   }
 
   .faq-box {
-    /* font-weight: 600; */
     font-weight: 400;
     border-top: solid 1px #E4E3E3;
     font-size: 16px;
@@ -1019,7 +923,6 @@ html {
   .faq-title {
     padding: 1em;
     display: block;
-    /* padding: 22px 30px 25px 20px; */
     padding: 22px 30px 25px 0;
     font-optical-sizing: auto;
     font-style: normal;
@@ -1033,12 +936,9 @@ html {
   .faq-title::after {
     content: "";
     position: absolute;
-    /* right: 1.25em; */
     right: 2px;
-    /* width: 2.5px; */
     width: 25px;
     height: 25px;
-    /* background-color: #999; */
     transition: all 0.3s;
     margin: auto 0;
     background-image: url(../img/keyboard_arrow_up.webp);
@@ -1064,7 +964,6 @@ html {
     line-height: 1.6;
     font-size: calc((29 / 750) * 100vw);
     margin-right: 4px;
-    /* font-weight: 700; */
     font-weight: 400;
   }
 
@@ -1084,9 +983,7 @@ html {
     line-height: 1.8;
     letter-spacing: .073em;
     font-size: calc((28 / 750) * 100vw);
-    /* padding: 0 23px 40px 0; */
     padding: 0 30px 40px 0;
-    /* font-weight: 600; */
     font-weight: 400;
   }
 
@@ -1124,7 +1021,6 @@ html {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 100px 100px 100px;
-    /* gap: 10px; */
     gap: 8px;
   }
 
@@ -1136,11 +1032,6 @@ html {
   .sec-instagram .btn-style {
     margin-top: 45px;
   }
-
-  /* .snapwidget-widget {
-    pointer-events: none;
-    cursor: default;
-  } */
 
   /* インスタ画像 */
   .sec-instagram .link-box .inst-item img {
@@ -1197,7 +1088,6 @@ html {
   }
 
   .foot-link a {
-    /* margin-right: 7px; */
     margin-right: 10px;
 
   }
@@ -1225,7 +1115,6 @@ html {
     　　TB_ヘッダー
   ==============================================================*/
   .header {
-    /* height: 120px; */
     padding: 20px 25px;
   }
 
@@ -1269,25 +1158,19 @@ html {
   }
 
   .nav-item.btn-box {
-    /* padding-right: 0; */
-    /* margin-top: 38px; */
-
     margin-top: 78px;
   }
 
   .nav-item.btn-box .btn-style {
-    /* width: 320px; */
     margin: 0;
     height: 65px;
     border-radius: 50px;
     font-size: 18px;
-
     width: 300px;
     font-size: 18px;
   }
 
   .nav-item.btn-box .contact {
-    /* margin-bottom: 12px; */
     margin-bottom: 14px;
   }
 
@@ -1305,17 +1188,6 @@ html {
   .nav-item.btn-box .map p {
     font-size: 20px;
   }
-
-  /* .nav-list {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-    padding-top: 0;
-    padding-bottom: 60px;
-  } */
-
-
 
 
   /*==============================================================
@@ -1352,7 +1224,6 @@ html {
     letter-spacing: .068em;
     white-space: nowrap;
     font-weight: bold;
-    /* margin: 80px 0 28px; */
     margin: 80px 0 30px;
   }
 
@@ -1376,7 +1247,6 @@ html {
   .btn-style {
     width: 480px;
     height: 84px;
-    /* margin: 0 auto; */
     border-radius: 50px;
     letter-spacing: .1em;
     font-size: 28px;
@@ -1465,7 +1335,6 @@ html {
   /* モーダル本体 */
   .modal-container {
     padding: 20px 44px 40px;
-    /* margin-top: 40px; */
   }
 
   .modal-container .modal-scroll {
@@ -1482,19 +1351,11 @@ html {
   }
 
   .modal-close {
-    /* position: absolute;
-    top: 0;
-    right: 0; */
-    /* margin-top: 40px; */
-    /* margin-right: 64px; */
-
     position: -webkit-sticky;
     position:         sticky;
     top: 0;
     padding-top: 0px;
-    /* margin-top: 20px; */
     margin-right: 20px;
-
   }
 
   .modal-close .close-icon {
@@ -1593,20 +1454,6 @@ html {
     letter-spacing: .1em;
   }
 
-  /* 右矢印 */
-  /* .swiper-button-next img {
-    width: 76px;
-    height: 76px;
-    margin-right: 240px;
-  } */
-
-  /* 左矢印 */
-  /* .swiper-button-prev img {
-    width: 76px;
-    height: 76px;
-    margin-left: 240px;
-  } */
-
   /* 矢印スタイル共通 */
   .swiper-arrows .swiper-button-next img,
   .swiper-arrows .swiper-button-prev img {
@@ -1672,7 +1519,6 @@ html {
   }
 
   .faq-title {
-    /* padding: 35px 40px 25px 0; */
     padding: 35px 40px 35px 8px;
     font-size: 23px;
   }
@@ -1694,12 +1540,10 @@ html {
     font-size: 22px;
     margin-right: 11px;
     margin-left: 2px;
-    /* font-weight: 600; */
   }
 
   .faq-content .faq-A {
     font-size: 22px;
-    /* padding: 0 60px 50px 0; */
     padding: 0 60px 50px 8px;
     line-height: 1.9;
   }
@@ -1716,7 +1560,6 @@ html {
 
   .link-box {
     grid-template-rows: 250px 250px 250px;
-    /* gap: 18px; */
     gap: 16px;
   }
 
@@ -1763,7 +1606,6 @@ html {
   }
 
   .foot-link a {
-    /* margin-right: 12px; */
     margin-right: 16px;
   }
 
@@ -1804,23 +1646,19 @@ html {
     　　PC_ヒーロー
   ==============================================================*/
   .sec-hero {
-    margin-top: 230px;
+    margin-top: 160px;
     position: relative;
     padding: 0 60px;
   }
 
   .sec-hero .title {
-    /* font-size: 9.3vw; */
     font-size: 7vw;
   }
 
   .sec {
     padding: 0 60px;
     scroll-margin-top: 140px;
-
-    /* max-width: 1226px; */
     max-width: 1300px;
-    /* padding: 0 25px; */
     margin: 0 auto;
   }
 
@@ -1872,8 +1710,6 @@ html {
   /* モーダル本体 */
   .modal-container {
     padding: 20px 73px 40px;
-    /* max-width: 1340px;
-    margin: 0 auto; */
   }
 
   .modal-container .modal-scroll {
@@ -1936,7 +1772,6 @@ html {
   }
 
   .modal-content .modal-item .item-box {
-    /* grid-template-columns: 235px 235px 235px 235px; */
     grid-template-columns: 21% 21% 21% 21%;
     margin-top: 64px;
   }
@@ -2010,19 +1845,6 @@ html {
     font-size: 30px;
   }
 
-
- /* .company-info {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 50px;
-  }
-
-  .map {
-    margin-top: -1px;
-    margin-bottom: 10px;
-    margin-left: -0px;
-  } */
-
   .president-box {
     display: grid;
     grid-template-columns: 1fr 1.5fr;
@@ -2044,7 +1866,6 @@ html {
   }
 
   .sec-company .sec-text {
-    /* font-size: 23px; */
     font-size: 22px;
     line-height: 1.85;
     letter-spacing: 0.126em;
@@ -2207,13 +2028,10 @@ html {
   ==============================================================*/
 
   .sec-hero {
-    /* max-width: 1300px;
-    margin: 0 auto; */
     margin-top: 230px;
   }
 
   .sec-hero .title {
-    /* font-size: 117px; */
     font-size: 7vw;
   }
 
@@ -2226,7 +2044,6 @@ html {
     color: #379E49;
     background-color: #fff;
     border: solid 2px #379E49;
-    /* opacity: 0.6; */
   }
 
   /*==============================================================
@@ -2278,13 +2095,6 @@ html {
   /*==============================================================
     　　PC-big_会社情報 company
   ==============================================================*/
-
-  /* .company-info .info-item {
-    grid-template-columns: 170px 1fr;
-    font-size: 23px;
-    padding: 35px 25px;
-  } */
-
   .company-info .info-item .tel {
     text-decoration-thickness: 2.5px;
     text-underline-offset: 8px;
@@ -2327,9 +2137,7 @@ html {
   }
 
   .footer .site-links a:hover {
-    /* color: #2f8f2f; */
     opacity: 0.4;
-    /* font-weight: bold; */
   }
 
   .footer .foot-link a {
@@ -2337,7 +2145,6 @@ html {
   }
 
   .footer .foot-link a:hover {
-    /* color: #2f8f2f; */
     opacity: 0.6;
   }
 
