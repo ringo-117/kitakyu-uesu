@@ -376,6 +376,14 @@ html {
     object-fit: cover;
   }
 
+  .hero-swiper .slide-02 .hero-img img {
+    object-position: 60% 38%;
+  }
+
+  .hero-swiper .slide-03 .hero-img img {
+    object-position: 20% 80%;
+  }
+
   .sec-hero .title {
     font-family: 'Roboto';
     font-size: 34px;
@@ -1667,6 +1675,14 @@ html {
     aspect-ratio: 1.5;
   }
 
+  .hero-swiper .slide-02 .hero-img img {
+    object-position: 25% 50%;
+  }
+
+  .hero-swiper .slide-03 .hero-img img {
+    object-position: 20% 80%;
+  }
+
   /*==============================================================
     　　PC_北九ウエスとは about
   ==============================================================*/
@@ -2044,6 +2060,10 @@ html {
     color: #379E49;
     background-color: #fff;
     border: solid 2px #379E49;
+  }
+
+  .hero-swiper .slide-03 .hero-img img {
+    object-position: 50% 100%;
   }
 
   /*==============================================================
