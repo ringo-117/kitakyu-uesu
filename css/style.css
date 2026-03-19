@@ -32,6 +32,11 @@ html {
     scroll-margin-top: 110px;
   }
 
+  .sec-company,
+  .sec-faq {
+    scroll-margin-top: 115px;
+  }
+
   .color {
     color: #379E49;
     font-weight: bold;
@@ -116,6 +121,119 @@ html {
 
   .img-wrap.show::before {
     transform: translateX(100%); /* 右にスライドして消える */
+  }
+
+  /*==============================================================
+    　　モーダル（年末年始）
+  ==============================================================*/
+  .main {
+    position: relative;
+  }
+
+  .season.modal-container .modal-scroll {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0 24px 44px;
+    border-radius: 0px;
+    width: 340px;
+  }
+
+  .season .modal-close {
+    padding-top: 0;
+    margin-top: -16px;
+    margin-right: -35px;
+  }
+
+  .season .modal-close .close-icon {
+    background-color: #379E49;
+    border: solid 1px #379E49;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    align-content: center;
+  }
+
+  .season .modal-content .title {
+    font-size: 22px;
+    color: #379E49;
+    margin: 25px 0 28px;
+  }
+
+  .season .modal-content .text {
+    font-size: 15px;
+    line-height: 2.5;
+  }
+
+  .season .modal-content .text span {
+    color: #379E49;
+    /* font-weight: 700; */
+    /* font-size: 16px; */
+  }
+
+
+  /*＝＝＝＝＝＝＝＝＝＝ モーダル（テレビ放送） ＝＝＝＝＝＝＝＝＝＝*/
+  .season .modal-content .title {
+    text-align: center;
+    margin: 25px 0 25px;
+  }
+
+  .logo-tv__img {
+    width: 100%;
+    height: auto;
+    padding: 0 10px;
+    margin-top: 25px;
+    margin-bottom: 10px;
+  }
+
+  .season .modal-content .text {
+    line-height: 1.8;
+    margin-bottom: 20px;
+    font-weight: 500;
+  }
+  .season .modal-content .text-01 {
+    letter-spacing: 0.06em;
+    font-size: 15.5px;
+  }
+  .season .modal-content .text-02 {
+    letter-spacing: 0.06em;
+    font-size: 17px;
+  }
+  .season .modal-content .text-03 {
+    letter-spacing: 0.06em;
+    font-size: 16px;
+  }
+
+  /* .season .modal-content .text-02 span {
+    font-size: 15.5px;
+  } */
+
+  .season .modal-content .text span.text-title {
+    color: #000000;
+    font-size: 13.5px;
+    font-weight: 600;
+  }
+
+  .season .modal-content .text-02 span.channel {
+    font-weight: 600;
+  }
+
+  .season .modal-content .text span.notes {
+    color: #000000;
+    font-weight: 450;
+    padding: 0 6px;
+    font-size: 11px;
+  }
+
+  .season .modal-content .text.text-03 {
+    margin-bottom: 0;
+  }
+
+  .season .modal-content .text span.time {
+    font-weight: 700;
   }
 
 
@@ -1050,6 +1168,10 @@ html {
     display: block;
   }
 
+  .sec-instagram .link-box .inst-item.item-01 img {
+    object-position: 50% 5%;
+  }
+
   .sec-instagram .link-box .inst-item.item-02 img {
     object-position: 50% 5%;
   }
@@ -1117,6 +1239,69 @@ html {
 
   .sp-none {
     display: block;
+  }
+
+  /*==============================================================
+    　　TB_モーダル（年末年始）
+  ==============================================================*/
+  .season.modal-container {
+    padding: 0;
+  }
+
+  .season.modal-container .modal-scroll {
+    width: 500px;
+    padding: 0 50px 60px;
+  }
+
+  .season .modal-close {
+    margin-top: -16px;
+    margin-right: -63px;
+  }
+
+  .season .modal-content {
+    padding: 0;
+  }
+
+  .season .modal-content .title {
+    font-size: 30px;
+    margin: 38px 0 30px;
+    letter-spacing: 0.02em;
+  }
+
+  .season .modal-content .text {
+    font-size: 20px;
+    letter-spacing: 0.02em;
+  }
+
+  .season .modal-content .text span {
+    font-size: 21px;
+  }
+
+  /*＝＝＝＝＝＝＝＝＝＝ モーダル（テレビ放送） ＝＝＝＝＝＝＝＝＝＝*/
+  .logo-tv__img {
+    margin-top: 36px;
+    margin-bottom: 10px;
+  }
+
+  .season .modal-content .text {
+    font-size: 20px;
+  }
+
+  .season .modal-content .text span {
+    font-size: 20px;
+  }
+
+  .season .modal-content .text-02 span {
+    font-size: 21.4px;
+  }
+
+  .season .modal-content .text span.text-title {
+    font-size: 16px;
+  }
+
+  .season .modal-content .text span.notes {
+    padding: 0 6px;
+    font-size: 14px;
   }
 
   /*==============================================================
@@ -1634,6 +1819,59 @@ html {
   .pc-only {
     display: block;
   }
+
+  /*==============================================================
+    　　PC_モーダル（年末年始）
+  ==============================================================*/
+  .season.modal-container .modal-scroll {
+    /* width: 600px; */
+    width: 550px;
+    padding: 0 70px 80px;
+  }
+
+  .season .modal-content .title {
+    margin: 58px 0 42px;
+    letter-spacing: 0.05em;
+  }
+
+  .season .modal-content .text {
+    letter-spacing: 0.03em;
+  }
+
+  .season .modal-close {
+    margin-top: -16px;
+    margin-right: -83px;
+  }
+
+  .season .modal-close .close-icon img {
+    margin-bottom: 2px;
+    margin-left: 11px;
+  }
+
+
+  /*＝＝＝＝＝＝＝＝＝＝ モーダル（テレビ放送） ＝＝＝＝＝＝＝＝＝＝*/
+  .season .modal-content .title {
+    margin: 40px 0 38px;
+    letter-spacing: 0.05em;
+  }
+
+  .logo-tv__img {
+    padding: 0 45px;
+    margin-top: 50px;
+    margin-bottom: 8px;
+  }
+
+  .season.modal-container .modal-scroll {
+    width: 570px;
+    padding: 0 70px 80px;
+  }
+
+  .season .modal-content .text-01 {
+    letter-spacing: 0.11em;
+    font-size: 19.5px;
+  }
+
+
   /*==============================================================
     　　PC_ヘッダー
   ==============================================================*/
@@ -1972,6 +2210,22 @@ html {
   .sp-nav {
     display: none;
   }
+
+  .sec {
+    scroll-margin-top: 180px;
+  }
+
+  .sec-company,
+  .sec-faq {
+    scroll-margin-top: 190px;
+  }
+
+  /*==============================================================
+    　　PC-big_モーダル（年末年始）
+  ==============================================================*/
+  /* .season.modal-container .modal-scroll {
+    width: 680px;
+  } */
 
   /*==============================================================
     　　PC-big_ヘッダー

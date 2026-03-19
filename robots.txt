@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://mew2025.com/sitemap.xml
+Sitemap: https://uesu-k.com/sitemap.xml
