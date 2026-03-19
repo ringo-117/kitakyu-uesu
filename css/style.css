@@ -190,9 +190,13 @@ html {
   }
 
   .season .modal-content .text {
-    line-height: 1.8;
-    margin-bottom: 20px;
+    /* line-height: 1.8;
+    margin-bottom: 20px; */
     font-weight: 500;
+
+
+    line-height: 1.7;
+    margin-bottom: 16px;
   }
   .season .modal-content .text-01 {
     letter-spacing: 0.06em;
@@ -1285,6 +1289,9 @@ html {
 
   .season .modal-content .text {
     font-size: 20px;
+
+    line-height: 1.8;
+    margin-bottom: 20px;
   }
 
   .season .modal-content .text span {
