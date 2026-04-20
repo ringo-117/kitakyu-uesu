@@ -190,13 +190,9 @@ html {
   }
 
   .season .modal-content .text {
-    /* line-height: 1.8;
-    margin-bottom: 20px; */
-    font-weight: 500;
-
-
     line-height: 1.7;
     margin-bottom: 16px;
+    font-weight: 500;
   }
   .season .modal-content .text-01 {
     letter-spacing: 0.06em;
@@ -211,10 +207,6 @@ html {
     font-size: 16px;
   }
 
-  /* .season .modal-content .text-02 span {
-    font-size: 15.5px;
-  } */
-
   .season .modal-content .text span.text-title {
     color: #000000;
     font-size: 13.5px;
@@ -223,6 +215,9 @@ html {
 
   .season .modal-content .text-02 span.channel {
     font-weight: 600;
+  }
+  .season .modal-content .text-02 span.channel-jp {
+    font-weight: 700;
   }
 
   .season .modal-content .text span.notes {
@@ -244,6 +239,11 @@ html {
   /*==============================================================
     　　ヘッダー
   ==============================================================*/
+  .site-nav--sp {
+    position: relative;
+    z-index: 100;
+  }
+
   .header {
     position: fixed;
     width: 100%;
@@ -315,8 +315,6 @@ html {
     background-color: #379E49;
     transition: 0.5s;
   }
-
-
 
   .btn i:nth-of-type(1){
     top: 0;
@@ -1173,7 +1171,7 @@ html {
   }
 
   .sec-instagram .link-box .inst-item.item-01 img {
-    object-position: 50% 5%;
+    object-position: 50% 23%;
   }
 
   .sec-instagram .link-box .inst-item.item-02 img {
@@ -1181,10 +1179,14 @@ html {
   }
 
   .sec-instagram .link-box .inst-item.item-03 img {
+    object-position: 50% 5%;
+  }
+
+  .sec-instagram .link-box .inst-item.item-04 img {
     object-position: 50% 25%;
   }
 
-  .sec-instagram .link-box .inst-item.item-06 img {
+  .sec-instagram .link-box .inst-item.item-07 img {
     object-position: 50% 75%;
   }
 
@@ -1289,7 +1291,6 @@ html {
 
   .season .modal-content .text {
     font-size: 20px;
-
     line-height: 1.8;
     margin-bottom: 20px;
   }
