@@ -155,60 +155,60 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-// 年末年始：スクロールモーダル
-document.addEventListener('DOMContentLoaded', () => {
-  const scrollModal = document.getElementById('scroll-modal');
-  const modalBg = document.querySelector('.modal-bg');
+// スクロールモーダル
+// document.addEventListener('DOMContentLoaded', () => {
+//   const scrollModal = document.getElementById('scroll-modal');
+//   const modalBg = document.querySelector('.modal-bg');
 
-  let isShown = false;
-  let isClosed = false;
-  let hasScrolled = false;
+//   let isShown = false;
+//   let isClosed = false;
+//   let hasScrolled = false;
 
-  // 画面サイズごとのスクロール量
-  function getScrollTrigger() {
-    const width = window.innerWidth;
+//   // 画面サイズごとのスクロール量
+//   function getScrollTrigger() {
+//     const width = window.innerWidth;
 
-    if (width <= 767) {
-      return 100;   // SP
-    } else if (width <= 1024) {
-      return 100;  // TB
-    } else {
-      return 140;  // PC
-    }
-  }
+//     if (width <= 767) {
+//       return 100;   // SP
+//     } else if (width <= 1024) {
+//       return 100;  // TB
+//     } else {
+//       return 140;  // PC
+//     }
+//   }
 
-  window.addEventListener('scroll', () => {
-    if (!hasScrolled && window.scrollY > 0) {
-      hasScrolled = true;
-    }
+//   window.addEventListener('scroll', () => {
+//     if (!hasScrolled && window.scrollY > 0) {
+//       hasScrolled = true;
+//     }
 
-    if (!hasScrolled || isShown || isClosed) return;
+//     if (!hasScrolled || isShown || isClosed) return;
 
-    const triggerScroll = getScrollTrigger();
+//     const triggerScroll = getScrollTrigger();
 
-    if (window.scrollY > triggerScroll) {
-      scrollModal.classList.add('active');
-      modalBg.classList.add('active');
-      document.body.style.overflow = 'hidden';
+//     if (window.scrollY > triggerScroll) {
+//       scrollModal.classList.add('active');
+//       modalBg.classList.add('active');
+//       document.body.style.overflow = 'hidden';
 
-      isShown = true;
-    }
-  });
+//       isShown = true;
+//     }
+//   });
 
-  // 閉じる処理
-  scrollModal.querySelectorAll('.modal-close').forEach(btn => {
-    btn.addEventListener('click', closeModal);
-  });
+//   // 閉じる処理
+//   scrollModal.querySelectorAll('.modal-close').forEach(btn => {
+//     btn.addEventListener('click', closeModal);
+//   });
 
-  modalBg.addEventListener('click', closeModal);
+//   modalBg.addEventListener('click', closeModal);
 
-  function closeModal() {
-    scrollModal.classList.remove('active');
-    modalBg.classList.remove('active');
-    document.body.style.overflow = '';
+//   function closeModal() {
+//     scrollModal.classList.remove('active');
+//     modalBg.classList.remove('active');
+//     document.body.style.overflow = '';
 
-    isClosed = true;
-  }
-});
+//     isClosed = true;
+//   }
+// });
 
 
